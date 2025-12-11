@@ -1,0 +1,111 @@
+{
+  "colorScheme": "light",
+  "fonts": [
+    {
+      "family": "Plus Jakarta Sans",
+      "role": "body"
+    },
+    {
+      "family": "Poppins",
+      "role": "body"
+    },
+    {
+      "family": "Arial",
+      "role": "body"
+    }
+  ],
+  "colors": {
+    "primary": "#101703",
+    "accent": "#DAF9A0",
+    "background": "#F1F1F1",
+    "textPrimary": "#101703",
+    "link": "#101703"
+  },
+  "typography": {
+    "fontFamilies": {
+      "primary": "Plus Jakarta Sans",
+      "heading": "Plus Jakarta Sans"
+    },
+    "fontStacks": {
+      "heading": [
+        "Poppins",
+        "sans-serif"
+      ],
+      "body": [
+        "Plus Jakarta Sans",
+        "sans-serif"
+      ],
+      "paragraph": [
+        "Plus Jakarta Sans",
+        "sans-serif"
+      ]
+    },
+    "fontSizes": {
+      "h1": "70px",
+      "h2": "70px",
+      "body": "14px"
+    }
+  },
+  "spacing": {
+    "baseUnit": 4,
+    "borderRadius": "16px"
+  },
+  "components": {
+    "input": {
+      "borderColor": "#CCCCCC",
+      "borderRadius": "16px"
+    },
+    "buttonPrimary": {
+      "background": "#DAF9A0",
+      "textColor": "#101703",
+      "borderRadius": "12px",
+      "shadow": "none"
+    },
+    "buttonSecondary": {
+      "background": "#101703",
+      "textColor": "#0000EE",
+      "borderRadius": "16px",
+      "shadow": "none"
+    }
+  },
+  "images": {
+    "logo": "File saved at: attached_assets/logo.svg",
+    "favicon": "https://rudo.co.uk/wp-content/uploads/2023/10/favicon-150x150.png",
+    "ogImage": null
+  },
+  "__framework_hints": [
+    "Site Kit by Google 1.167.0"
+  ],
+  "__llm_logo_reasoning": {
+    "selectedIndex": 1,
+    "reasoning": "Logo #1 is an SVG that matches the brand name 'Rudo' and is visible in the header, linking to the homepage, making it the most suitable choice for the brand logo.",
+    "confidence": 0.9
+  },
+  "__llm_button_reasoning": {
+    "primary": {
+      "index": 0,
+      "text": "Contact",
+      "reasoning": "Button #0 has a vibrant green background (#DAF9A0), which is a strong indicator for a primary CTA. The text 'Contact' is action-oriented, making it the main call-to-action."
+    },
+    "secondary": {
+      "index": 1,
+      "text": "See Our Full Process",
+      "reasoning": "Button #1 has a dark background (#101703), which is distinctly different from the primary button's vibrant color. It serves as a secondary action with the text 'See Our Full Process', which is less urgent than the primary CTA."
+    },
+    "confidence": 0.95
+  },
+  "personality": {
+    "tone": "professional",
+    "energy": "medium",
+    "targetAudience": "businesses seeking web design services"
+  },
+  "designSystem": {
+    "framework": "unknown",
+    "componentLibrary": null
+  },
+  "confidence": {
+    "buttons": 0.95,
+    "colors": 0.9,
+    "overall": 0.925
+  }
+}
