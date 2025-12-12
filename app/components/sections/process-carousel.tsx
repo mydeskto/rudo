@@ -8,28 +8,28 @@ import { Button } from "@/components/ui/button";
 const steps = [
   {
     number: "01",
-    title: "Discovery & Alignment",
-    desc: "We begin by understanding your business, market, and objectives — through stakeholder interviews, brand positioning workshops, and content audits."
+    title: "Project Discovery",
+    desc: "We start by understanding your business goals, target audience, and project requirements. Through discussions and analysis, we define the scope and objectives for your website development project."
   },
   {
     number: "02",
-    title: "Audience & Journey Mapping",
-    desc: "Using personas and funnel stages, we define who your users are and how they should move through the site — so we can design with intent."
+    title: "Design & Planning",
+    desc: "We create website designs and plan the architecture. This includes wireframes, user flows, and visual designs that align with your brand and provide excellent user experiences."
   },
   {
     number: "03",
-    title: "Content Strategy & Wireframes",
-    desc: "We map out user flows and wireframes to shape the structure, interactions, and conversion pathways before any visual design begins."
+    title: "Frontend Development",
+    desc: "We build the user interface using modern frontend technologies. We create responsive, interactive websites that work seamlessly across all devices and browsers."
   },
   {
     number: "04",
-    title: "UX/UI Design",
-    desc: "Our designers create clean, conversion-focused interfaces tailored to your brand with mobile-first thinking and atomic design principles."
+    title: "Backend Development",
+    desc: "We develop the server-side systems, APIs, and databases. We handle authentication, data management, integrations, and all the technical infrastructure your website needs."
   },
   {
     number: "05",
-    title: "Development",
-    desc: "We bring designs to life with clean, semantic code, ensuring fast load times, accessibility compliance, and seamless CMS integration."
+    title: "Testing & Launch",
+    desc: "We thoroughly test your website for functionality, performance, and compatibility. Once everything is ready, we deploy your website and ensure it's live and running smoothly."
   }
 ];
 

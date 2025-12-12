@@ -7,21 +7,21 @@ import { Quote } from "lucide-react";
 const testimonials = [
   {
     id: 1,
-    quote: "Their responsiveness and technical expertise were impressive.",
+    quote: "They delivered a complete website from frontend to backend. Impressive technical expertise.",
     author: "Deborah O'Sullivan",
     role: "Director, Ten2Two",
     color: "#E0B0FF" // Lilac/Purple from image
   },
   {
     id: 2,
-    quote: "They were exceptional and I’m very happy with the results.",
+    quote: "Exceptional website development. The final result exceeded our expectations.",
     author: "Hayley Van Leeuwan",
     role: "Director of Product, Voyager Worldwide",
     color: "#DAF9A0" // Green
   },
   {
     id: 3,
-    quote: "Their efficiency and approach to working are unrivaled and they put a lot of agencies to shame.",
+    quote: "Their efficiency and approach are unrivaled. They handled frontend and backend seamlessly.",
     author: "Andrew Mabbitt",
     role: "Director, Computer & Network Security Firm",
     color: "#FFD700" // Yellowish
@@ -80,22 +80,22 @@ export function TestimonialSlider() {
             animate={{ opacity: 1, scale: 1, x: 0, zIndex: 10 }}
             exit={{ opacity: 0, scale: 0.9, x: -20, zIndex: 0 }}
             transition={{ duration: 0.5, ease: "easeInOut" }}
-            className="absolute inset-0 rounded-[3rem] p-8 md:p-16 flex flex-col justify-between shadow-sm"
+            className="absolute inset-0 rounded-[3rem] p-6 sm:p-8 md:p-16 flex flex-col justify-between shadow-sm"
             style={{ backgroundColor: currentTestimonial.color }}
           >
             <div>
-              <Quote className="w-12 h-12 text-[#101703] opacity-20 mb-8" />
-              <h3 className="text-3xl md:text-5xl font-bold text-[#101703] leading-tight max-w-4xl select-none">
+              <Quote className="w-8 h-8 md:w-12 md:h-12 text-[#101703] opacity-20 mb-4 md:mb-8" />
+              <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-5xl font-bold text-[#101703] leading-tight max-w-4xl select-none">
                 {currentTestimonial.quote}
               </h3>
             </div>
             
             <div className="flex items-end justify-between select-none">
               <div>
-                <p className="text-[#101703] font-bold text-lg">
+                <p className="text-[#101703] font-bold text-sm md:text-lg">
                   — {currentTestimonial.author}
                 </p>
-                <p className="text-[#101703]/70">
+                <p className="text-[#101703]/70 text-xs md:text-base">
                   {currentTestimonial.role}
                 </p>
               </div>

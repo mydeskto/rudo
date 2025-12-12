@@ -125,7 +125,7 @@ export function BookingSection() {
           className="bg-white rounded-[2rem] shadow-2xl border border-gray-100 overflow-hidden min-h-[600px] flex flex-col md:flex-row"
         >
           {/* Sidebar Info */}
-          <div className="md:w-1/3 bg-gray-50 p-8 border-r border-gray-100 flex flex-col gap-6">
+          <div className="md:w-1/4 bg-gray-50 p-8 border-r border-gray-100 flex flex-col justify-center items-center gap-6">
             <div className="w-12 h-12 rounded-full overflow-hidden border-2 border-[#DAF9A0]">
                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop" alt="Host" />
             </div>
@@ -144,7 +144,7 @@ export function BookingSection() {
                </div>
                <div className="flex items-center gap-3">
                  <Globe size={18} className="text-[#DAF9A0] fill-[#101703]" />
-                 <span>London (GMT)</span>
+                 <span>Location (GMT)</span>
                </div>
             </div>
             
@@ -161,7 +161,7 @@ export function BookingSection() {
           </div>
 
           {/* Main Content Area */}
-          <div className="md:w-2/3 p-8 relative">
+          <div className="md:w-2/2 p-8 relative">
              <AnimatePresence mode="wait">
                {step === "date" ? (
                  <motion.div 

@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { Menu, X, Cloud, Building2, Factory, HeartPulse, Users, Wallet, ChevronDown } from "lucide-react";
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
@@ -8,6 +9,10 @@ import { cn } from "@/lib/utils";
 import { AnimatePresence, motion } from "framer-motion";
 
 export function Navbar() {
+  const pathname = usePathname();
+  const isCaseStudiesPage = pathname === "/case-studies";
+  const ActionPlanPage = pathname === "/action-plan";
+  const isProcessPage = pathname === "/process";
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [activeMenu, setActiveMenu] = useState<string | null>(null);
@@ -21,14 +26,20 @@ export function Navbar() {
   }, []);
 
   const isMenuOpen = activeMenu !== null;
+  
+  // On case studies page, links should always be black
+  // On home page, links should be white initially, black on scroll
+  const shouldUseBlackText = isCaseStudiesPage || ActionPlanPage || isProcessPage || isMenuOpen || isScrolled;
 
   return (
     <nav
       onMouseLeave={() => setActiveMenu(null)}
       className={cn(
         "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
-        isScrolled && !isMenuOpen ? "bg-white backdrop-blur-md py-4 shadow-lg border-b border-gray-200" : "bg-transparent py-6",
-        isMenuOpen ? "bg-[#F1F1F1] py-6" : "py-6"
+        isCaseStudiesPage || ActionPlanPage || isProcessPage
+          ? (isScrolled && !isMenuOpen ? "bg-white backdrop-blur-md py-4 shadow-lg border-b border-gray-200" : "bg-[#DAF9A0] py-6")
+          : (isScrolled && !isMenuOpen ? "bg-white backdrop-blur-md py-4 shadow-lg border-b border-gray-200" : "bg-transparent py-6"),
+        isMenuOpen ? "bg-[#F1F1F1] py-6" : ""
       )}
     >
       <div className="max-w-[1400px] mx-auto px-6 md:px-12 flex items-center justify-between relative z-50">
@@ -38,7 +49,13 @@ export function Navbar() {
             src="/logo.svg" 
             alt="Rudo" 
             className={cn("h-8 w-auto transition-all duration-300")}
-            style={!isMenuOpen && !isScrolled ? { filter: "brightness(0) saturate(100%) invert(88%) sepia(21%) saturate(718%) hue-rotate(39deg) brightness(101%) contrast(96%)" } : {}}
+            style={
+              isCaseStudiesPage || ActionPlanPage || isProcessPage
+                ? { filter: "brightness(0) saturate(0%)" } // Force black on case studies page
+                : !isMenuOpen && !isScrolled 
+                  ? { filter: "brightness(0) saturate(100%) invert(88%) sepia(21%) saturate(718%) hue-rotate(39deg) brightness(101%) contrast(96%)" } 
+                  : { filter: "brightness(0) saturate(0%)" } // Black logo when scrolled or menu open
+            }
           />
            <span className="sr-only">Rudo</span>
         </Link>
@@ -50,7 +67,7 @@ export function Navbar() {
               onMouseEnter={() => setActiveMenu('industry')}
               className={cn(
                 "flex items-center gap-1 text-sm font-medium transition-colors py-2 px-1",
-                isMenuOpen || isScrolled ? "text-[#101703] hover:text-[#88cc20]" : "text-white hover:text-[#DAF9A0]",
+                shouldUseBlackText ? "text-[#101703] hover:text-[#88cc20]" : "text-white hover:text-[#DAF9A0]",
                 activeMenu === 'industry' && "text-[#101703]"
               )}
             >
@@ -62,62 +79,66 @@ export function Navbar() {
               onMouseEnter={() => setActiveMenu('cms')}
               className={cn(
                 "flex items-center gap-1 text-sm font-medium transition-colors py-2 px-1",
-                isMenuOpen || isScrolled ? "text-[#101703] hover:text-[#88cc20]" : "text-white hover:text-[#DAF9A0]",
+                shouldUseBlackText ? "text-[#101703] hover:text-[#88cc20]" : "text-white hover:text-[#DAF9A0]",
                  activeMenu === 'cms' && "text-[#101703]"
               )}
             >
               by CMS <ChevronDown size={14} className={cn("transition-transform duration-200", activeMenu === 'cms' && "rotate-180")} />
             </button>
 
-            <a href="#about" className={cn("text-sm font-medium transition-colors", isMenuOpen || isScrolled ? "text-[#101703] hover:text-[#88cc20]" : "text-white hover:text-[#DAF9A0]")} onMouseEnter={() => setActiveMenu(null)}>
+            <Link href="/about" className={cn("text-sm font-medium transition-colors", shouldUseBlackText ? "text-[#101703] hover:text-[#88cc20]" : "text-white hover:text-[#DAF9A0]")} onMouseEnter={() => setActiveMenu(null)}>
               About
-            </a>
+            </Link>
             
-            <a href="#process" className={cn("text-sm font-medium transition-colors", isMenuOpen || isScrolled ? "text-[#101703] hover:text-[#88cc20]" : "text-white hover:text-[#DAF9A0]")} onMouseEnter={() => setActiveMenu(null)}>
+            <Link href="/process" className={cn("text-sm font-medium transition-colors", shouldUseBlackText ? "text-[#101703] hover:text-[#88cc20]" : "text-white hover:text-[#DAF9A0]")} onMouseEnter={() => setActiveMenu(null)}>
               Process
-            </a>
+            </Link>
         </div>
 
         {/* Desktop Actions */}
         <div className="hidden lg:flex items-center gap-6 ml-8">
-           <a 
-             href="#case-studies" 
+           <Link 
+             href="/case-studies" 
              className={cn(
                "font-medium text-sm transition-colors",
-               isMenuOpen || isScrolled 
+               shouldUseBlackText 
                  ? "text-[#101703] hover:text-[#88cc20]" 
                  : "text-white/90 hover:text-[#DAF9A0]"
              )}
              onMouseEnter={() => setActiveMenu(null)}
            >
              Case Studies
-           </a>
+           </Link>
            <div className="flex items-center gap-3">
-            <Button 
-              variant="outline" 
-              className={cn(
-                "rounded-lg px-6 h-11 text-sm font-medium border transition-colors",
-                isMenuOpen || isScrolled
-                  ? "border-[#101703]/10 bg-[#101703]/5 text-[#101703] hover:bg-[#101703]/10" 
-                  : "border-white/20 bg-transparent text-white hover:bg-white/10 hover:text-white"
-              )}
-            >
-              Action Plan
-            </Button>
-            <Button 
-              className={cn(
-                 "rounded-lg px-6 h-11 text-sm font-semibold transition-colors",
-                 "bg-[#101703] text-white hover:bg-[#101703]/90" // Always dark button as per screenshot
-              )}
-            >
-              Contact
-            </Button>
+            <Link href="/action-plan">
+              <Button 
+                variant="outline" 
+                className={cn(
+                  "rounded-lg px-6 h-11 text-sm font-medium border transition-all duration-300",
+                  shouldUseBlackText
+                    ? "border-[#101703]/10 bg-[#101703]/5 text-[#101703] hover:bg-[#DAF9A0] hover:border-[#DAF9A0] hover:text-[#101703] hover:shadow-md" 
+                    : "border-white/20 bg-transparent text-white hover:bg-[#DAF9A0] hover:border-[#DAF9A0] hover:text-[#101703] hover:shadow-md"
+                )}
+              >
+                Action Plan
+              </Button>
+            </Link>
+            <Link href="/contact">
+              <Button 
+                className={cn(
+                   "rounded-lg px-6 h-11 text-sm font-semibold transition-colors",
+                   "bg-[#101703] text-white hover:bg-[#101703]/90" // Always dark button as per screenshot
+                )}
+              >
+                Contact
+              </Button>
+            </Link>
            </div>
         </div>
 
         {/* Mobile Toggle */}
         <button
-          className={cn("lg:hidden relative z-50 transition-colors", isMenuOpen || isScrolled ? "text-[#101703]" : "text-white")}
+          className={cn("lg:hidden relative z-50 transition-colors", shouldUseBlackText ? "text-[#101703]" : "text-white")}
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
         >
           {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -266,11 +287,13 @@ export function Navbar() {
           >
             Action Plan
           </Button>
-          <Button 
-            className="rounded-full bg-[#DAF9A0] text-[#101703] w-full max-w-xs h-12"
-          >
-            Contact
-          </Button>
+          <Link href="/contact" className="w-full max-w-xs">
+            <Button 
+              className="rounded-full bg-[#DAF9A0] text-[#101703] w-full h-12"
+            >
+              Contact
+            </Button>
+          </Link>
         </div>
       )}
     </nav>
