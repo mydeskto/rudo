@@ -8,13 +8,13 @@ import { teamMembers } from "@/lib/team-data";
 
 export default function AboutPage() {
   return (
-    <div className="min-h-screen bg-[#F1F1F1] font-sans">
+    <div className="min-h-screen bg-background font-sans">
       {/* Hero Section */}
-      <section className="relative min-h-[20vh] bg-[#101703] text-white pt-22 pb-10 px-6 overflow-hidden flex flex-col justify-center items-center">
+      <section className="relative min-h-[20vh] bg-foreground text-white pt-22 pb-10 px-6 overflow-hidden flex flex-col justify-center items-center">
         {/* Background Effects */}
         <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
-          <div className="absolute top-[-20%] left-[10%] w-[60vw] h-[60vw] bg-[#DAF9A0]/10 rounded-full blur-[120px]" />
-          <div className="absolute bottom-[-10%] right-[-10%] w-[50vw] h-[50vw] bg-[#DAF9A0]/5 rounded-full blur-[100px]" />
+          <div className="absolute top-[-20%] left-[10%] w-[60vw] h-[60vw] bg-primary-soft/10 rounded-full blur-[120px]" />
+          <div className="absolute bottom-[-10%] right-[-10%] w-[50vw] h-[50vw] bg-primary-soft/5 rounded-full blur-[100px]" />
         </div>
 
         <div className="relative z-10 max-w-5xl mx-auto text-center flex flex-col items-center gap-8">
@@ -24,7 +24,7 @@ export default function AboutPage() {
             transition={{ delay: 0.2, duration: 0.8 }}
             className="flex items-center justify-center gap-2 mb-6"
           >
-            <Users className="w-5 h-5 text-[#DAF9A0]" />
+            <Users className="w-5 h-5 text-primary-soft" />
             <span className="px-4 py-2 rounded-full border border-white/10 text-sm text-white/60 bg-white/5 backdrop-blur-sm">
               About Us
             </span>
@@ -37,7 +37,7 @@ export default function AboutPage() {
             className="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.1] md:leading-[1.05]"
           >
             We are full stack <br className="hidden md:block" />
-            <span className="text-[#DAF9A0]">website developers</span>
+            <span className="text-primary-soft">website developers</span>
           </motion.h1>
 
           <motion.p
@@ -55,10 +55,10 @@ export default function AboutPage() {
       <section className="py-20 px-6 max-w-7xl mx-auto">
         {/* About Text */}
         <div className="max-w-4xl mx-auto mb-20">
-          <h2 className="text-4xl md:text-5xl font-bold text-[#101703] mb-8">
+          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-8">
             Who We Are
           </h2>
-          <div className="space-y-6 text-gray-600 leading-relaxed">
+          <div className="space-y-6 text-muted-foreground leading-relaxed">
             <p className="text-lg">
               We are a team of full stack developers who specialize in website creation and development. We build custom websites from the ground up, handling both frontend and backend development to deliver complete, functional solutions for your business.
             </p>
@@ -74,13 +74,13 @@ export default function AboutPage() {
         {/* Meet the Team Section */}
         <div className="mb-20">
           <div className="max-w-4xl mx-auto mb-12">
-            <h2 className="text-4xl md:text-5xl font-bold text-[#101703] mb-6">
+            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
               Meet the Team
             </h2>
-            <p className="text-lg text-gray-600 leading-relaxed mb-8">
+            <p className="text-lg text-muted-foreground leading-relaxed mb-8">
               Our team of full stack developers brings together expertise in frontend and backend development. We combine technical skills with a collaborative approach to deliver exceptional websites for our clients.
             </p>
-            <p className="text-gray-600 leading-relaxed">
+            <p className="text-muted-foreground leading-relaxed">
               Each team member specializes in different aspects of website development, from creating beautiful user interfaces to building robust backend systems. Together, we work as a cohesive unit to bring your website vision to life.
             </p>
           </div>
@@ -100,10 +100,10 @@ export default function AboutPage() {
                   alt={member.name}
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 grayscale group-hover:grayscale-0"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#101703]/90 via-transparent to-transparent opacity-100" />
+                <div className="absolute inset-0 bg-gradient-to-t from-foreground/90 via-transparent to-transparent opacity-100" />
                 <div className="absolute bottom-0 left-0 p-6 md:p-8 w-full">
                   <h3 className="text-2xl font-bold text-white mb-1">{member.name}</h3>
-                  <p className="text-[#DAF9A0] font-medium mb-3">{member.role}</p>
+                  <p className="text-primary-soft font-medium mb-3">{member.role}</p>
                   <p className="text-white/80 text-sm leading-relaxed">{member.bio}</p>
                 </div>
               </motion.div>
@@ -113,7 +113,7 @@ export default function AboutPage() {
 
         {/* Services Section */}
         <div className="max-w-4xl mx-auto mb-20">
-          <h2 className="text-4xl md:text-5xl font-bold text-[#101703] mb-12 text-center">
+          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-12 text-center">
             Our Services
           </h2>
           <div className="grid md:grid-cols-2 gap-8">
@@ -123,16 +123,16 @@ export default function AboutPage() {
               viewport={{ once: true }}
               className="bg-white rounded-3xl p-8 shadow-sm border border-gray-100"
             >
-              <div className="w-12 h-12 rounded-full bg-[#DAF9A0] flex items-center justify-center mb-6">
-                <Code className="w-6 h-6 text-[#101703]" />
+              <div className="w-12 h-12 rounded-full bg-primary-soft flex items-center justify-center mb-6">
+                <Code className="w-6 h-6 text-foreground" />
               </div>
-              <h3 className="text-2xl font-bold text-[#101703] mb-4">
+              <h3 className="text-2xl font-bold text-foreground mb-4">
                 Full Stack Development
               </h3>
-              <p className="text-gray-600 leading-relaxed mb-4">
+              <p className="text-muted-foreground leading-relaxed mb-4">
                 We handle both frontend and backend development, delivering complete website solutions from start to finish. We use modern technologies like React, Next.js, Node.js, and more.
               </p>
-              <p className="text-gray-600 leading-relaxed">
+              <p className="text-muted-foreground leading-relaxed">
                 Our full stack expertise ensures seamless integration between frontend and backend, creating fast, scalable, and maintainable websites.
               </p>
             </motion.div>
@@ -144,16 +144,16 @@ export default function AboutPage() {
               transition={{ delay: 0.1 }}
               className="bg-white rounded-3xl p-8 shadow-sm border border-gray-100"
             >
-              <div className="w-12 h-12 rounded-full bg-[#DAF9A0] flex items-center justify-center mb-6">
-                <FileCode className="w-6 h-6 text-[#101703]" />
+              <div className="w-12 h-12 rounded-full bg-primary-soft flex items-center justify-center mb-6">
+                <FileCode className="w-6 h-6 text-foreground" />
               </div>
-              <h3 className="text-2xl font-bold text-[#101703] mb-4">
+              <h3 className="text-2xl font-bold text-foreground mb-4">
                 WordPress Design
               </h3>
-              <p className="text-gray-600 leading-relaxed mb-4">
+              <p className="text-muted-foreground leading-relaxed mb-4">
                 We create custom WordPress websites with beautiful designs and powerful functionality. Our WordPress services include custom theme development, plugin creation, and WooCommerce integration.
               </p>
-              <p className="text-gray-600 leading-relaxed">
+              <p className="text-muted-foreground leading-relaxed">
                 We build WordPress sites that are fast, secure, SEO-friendly, and easy to manage. From custom themes to plugin development, we deliver professional WordPress solutions.
               </p>
             </motion.div>
@@ -165,16 +165,16 @@ export default function AboutPage() {
               transition={{ delay: 0.2 }}
               className="bg-white rounded-3xl p-8 shadow-sm border border-gray-100"
             >
-              <div className="w-12 h-12 rounded-full bg-[#DAF9A0] flex items-center justify-center mb-6">
-                <Globe className="w-6 h-6 text-[#101703]" />
+              <div className="w-12 h-12 rounded-full bg-primary-soft flex items-center justify-center mb-6">
+                <Globe className="w-6 h-6 text-foreground" />
               </div>
-              <h3 className="text-2xl font-bold text-[#101703] mb-4">
+              <h3 className="text-2xl font-bold text-foreground mb-4">
                 SEO Services
               </h3>
-              <p className="text-gray-600 leading-relaxed mb-4">
+              <p className="text-muted-foreground leading-relaxed mb-4">
                 We provide comprehensive SEO services to improve your website's search engine visibility. Our SEO approach includes On-Page SEO, Off-Page SEO, Technical SEO, and Local SEO.
               </p>
-              <p className="text-gray-600 leading-relaxed">
+              <p className="text-muted-foreground leading-relaxed">
                 We optimize content, build quality backlinks, improve site speed, and implement local SEO strategies to help your website rank better and attract more organic traffic.
               </p>
             </motion.div>
@@ -186,16 +186,16 @@ export default function AboutPage() {
               transition={{ delay: 0.3 }}
               className="bg-white rounded-3xl p-8 shadow-sm border border-gray-100"
             >
-              <div className="w-12 h-12 rounded-full bg-[#DAF9A0] flex items-center justify-center mb-6">
-                <Award className="w-6 h-6 text-[#101703]" />
+              <div className="w-12 h-12 rounded-full bg-primary-soft flex items-center justify-center mb-6">
+                <Award className="w-6 h-6 text-foreground" />
               </div>
-              <h3 className="text-2xl font-bold text-[#101703] mb-4">
+              <h3 className="text-2xl font-bold text-foreground mb-4">
                 Maintenance & Support
               </h3>
-              <p className="text-gray-600 leading-relaxed mb-4">
+              <p className="text-muted-foreground leading-relaxed mb-4">
                 We provide ongoing website maintenance, updates, and support to keep your site running smoothly. From bug fixes to feature additions, we ensure your website continues to perform well.
               </p>
-              <p className="text-gray-600 leading-relaxed">
+              <p className="text-muted-foreground leading-relaxed">
                 Our support includes regular updates, security monitoring, performance optimization, and technical assistance whenever you need it.
               </p>
             </motion.div>
@@ -236,13 +236,13 @@ export default function AboutPage() {
                 transition={{ delay: i * 0.1 }}
                 className="bg-white rounded-3xl p-8 shadow-sm border border-gray-100 hover:shadow-md transition-shadow"
               >
-                <div className="w-12 h-12 rounded-full bg-[#DAF9A0] flex items-center justify-center mb-6">
-                  <IconComponent className="w-6 h-6 text-[#101703]" />
+                <div className="w-12 h-12 rounded-full bg-primary-soft flex items-center justify-center mb-6">
+                  <IconComponent className="w-6 h-6 text-foreground" />
                 </div>
-                <h3 className="text-xl font-bold text-[#101703] mb-4">
+                <h3 className="text-xl font-bold text-foreground mb-4">
                   {item.title}
                 </h3>
-                <p className="text-gray-600 leading-relaxed text-sm">
+                <p className="text-muted-foreground leading-relaxed text-sm">
                   {item.desc}
                 </p>
               </motion.div>
@@ -251,7 +251,7 @@ export default function AboutPage() {
         </div>
 
         {/* CTA Section */}
-        <div className="bg-[#101703] rounded-[3rem] p-12 md:p-16 text-center">
+        <div className="bg-foreground rounded-[3rem] p-12 md:p-16 text-center">
           <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
             Ready to work with us?
           </h2>
@@ -260,7 +260,7 @@ export default function AboutPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/contact">
-              <Button className="h-14 px-8 rounded-full bg-[#DAF9A0] text-[#101703] hover:bg-[#c5e885] text-lg font-bold">
+              <Button className="h-14 px-8 rounded-full bg-primary-soft text-foreground hover:bg-primary-hover text-lg font-bold">
                 Get in Touch
               </Button>
             </Link>

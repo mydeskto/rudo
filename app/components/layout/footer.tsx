@@ -5,7 +5,7 @@ import { Facebook, Twitter, Linkedin, Instagram, Mail, Phone, MapPin } from "luc
 
 export function Footer() {
   return (
-    <footer className="bg-[#101703] text-white">
+    <footer className="bg-foreground text-white">
       <div className="max-w-7xl mx-auto px-6 py-16 md:py-20">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
           {/* Logo & Description */}
@@ -19,34 +19,34 @@ export function Footer() {
               />
             </Link>
             <p className="text-white/70 text-sm leading-relaxed mb-6">
-              Full stack developers specializing in website creation and development. We build custom websites from frontend to backend.
+              Full stack developers specializing in website creation and development. We build custom websites from frontend to backend, create WordPress solutions, and provide comprehensive SEO services.
             </p>
             {/* Social Links */}
             <div className="flex gap-4">
               <a 
                 href="#" 
-                className="w-10 h-10 rounded-full bg-white/10 hover:bg-[#DAF9A0] hover:text-[#101703] flex items-center justify-center transition-colors"
+                className="w-10 h-10 rounded-full bg-white/10 hover:bg-primary-soft hover:text-foreground flex items-center justify-center transition-colors"
                 aria-label="LinkedIn"
               >
                 <Linkedin size={18} />
               </a>
               <a 
                 href="#" 
-                className="w-10 h-10 rounded-full bg-white/10 hover:bg-[#DAF9A0] hover:text-[#101703] flex items-center justify-center transition-colors"
+                className="w-10 h-10 rounded-full bg-white/10 hover:bg-primary-soft hover:text-foreground flex items-center justify-center transition-colors"
                 aria-label="Twitter"
               >
                 <Twitter size={18} />
               </a>
               <a 
                 href="#" 
-                className="w-10 h-10 rounded-full bg-white/10 hover:bg-[#DAF9A0] hover:text-[#101703] flex items-center justify-center transition-colors"
+                className="w-10 h-10 rounded-full bg-white/10 hover:bg-primary-soft hover:text-foreground flex items-center justify-center transition-colors"
                 aria-label="Facebook"
               >
                 <Facebook size={18} />
               </a>
               <a 
                 href="#" 
-                className="w-10 h-10 rounded-full bg-white/10 hover:bg-[#DAF9A0] hover:text-[#101703] flex items-center justify-center transition-colors"
+                className="w-10 h-10 rounded-full bg-white/10 hover:bg-primary-soft hover:text-foreground flex items-center justify-center transition-colors"
                 aria-label="Instagram"
               >
                 <Instagram size={18} />
@@ -56,30 +56,35 @@ export function Footer() {
 
           {/* Services */}
           <div>
-            <h3 className="text-lg font-bold mb-6 text-[#DAF9A0]">Services</h3>
+            <h3 className="text-lg font-bold mb-6 text-primary-soft">Services</h3>
             <ul className="space-y-3">
               <li>
-                <Link href="/case-studies" className="text-white/70 hover:text-[#DAF9A0] transition-colors text-sm">
+                <Link href="/case-studies" className="text-white/70 hover:text-primary-soft transition-colors text-sm">
                   Website Development
                 </Link>
               </li>
               <li>
-                <Link href="/case-studies" className="text-white/70 hover:text-[#DAF9A0] transition-colors text-sm">
+                <Link href="/case-studies" className="text-white/70 hover:text-primary-soft transition-colors text-sm">
                   Frontend Development
                 </Link>
               </li>
               <li>
-                <Link href="/case-studies" className="text-white/70 hover:text-[#DAF9A0] transition-colors text-sm">
+                <Link href="/case-studies" className="text-white/70 hover:text-primary-soft transition-colors text-sm">
                   Backend Development
                 </Link>
               </li>
               <li>
-                <Link href="/case-studies" className="text-white/70 hover:text-[#DAF9A0] transition-colors text-sm">
+                <Link href="/case-studies" className="text-white/70 hover:text-primary-soft transition-colors text-sm">
                   Website Design
                 </Link>
               </li>
               <li>
-                <Link href="/case-studies" className="text-white/70 hover:text-[#DAF9A0] transition-colors text-sm">
+                <Link href="/case-studies" className="text-white/70 hover:text-primary-soft transition-colors text-sm">
+                  WordPress Design
+                </Link>
+              </li>
+              <li>
+                <Link href="/case-studies" className="text-white/70 hover:text-primary-soft transition-colors text-sm">
                   SEO Services
                 </Link>
               </li>
@@ -88,30 +93,30 @@ export function Footer() {
 
           {/* Company */}
           <div>
-            <h3 className="text-lg font-bold mb-6 text-[#DAF9A0]">Company</h3>
+            <h3 className="text-lg font-bold mb-6 text-primary-soft">Company</h3>
             <ul className="space-y-3">
               <li>
-                <Link href="#about" className="text-white/70 hover:text-[#DAF9A0] transition-colors text-sm">
+                <Link href="#about" className="text-white/70 hover:text-primary-soft transition-colors text-sm">
                   About Us
                 </Link>
               </li>
               <li>
-                <Link href="/case-studies" className="text-white/70 hover:text-[#DAF9A0] transition-colors text-sm">
+                <Link href="/case-studies" className="text-white/70 hover:text-primary-soft transition-colors text-sm">
                   Case Studies
                 </Link>
               </li>
               <li>
-                <Link href="#process" className="text-white/70 hover:text-[#DAF9A0] transition-colors text-sm">
+                <Link href="#process" className="text-white/70 hover:text-primary-soft transition-colors text-sm">
                   Our Process
                 </Link>
               </li>
               <li>
-                <Link href="#" className="text-white/70 hover:text-[#DAF9A0] transition-colors text-sm">
+                <Link href="#" className="text-white/70 hover:text-primary-soft transition-colors text-sm">
                   Blog
                 </Link>
               </li>
               <li>
-                <Link href="#" className="text-white/70 hover:text-[#DAF9A0] transition-colors text-sm">
+                <Link href="#" className="text-white/70 hover:text-primary-soft transition-colors text-sm">
                   Careers
                 </Link>
               </li>
@@ -120,22 +125,22 @@ export function Footer() {
 
           {/* Contact */}
           <div>
-            <h3 className="text-lg font-bold mb-6 text-[#DAF9A0]">Contact</h3>
+            <h3 className="text-lg font-bold mb-6 text-primary-soft">Contact</h3>
             <ul className="space-y-4">
               <li className="flex items-start gap-3">
-                <Mail size={18} className="text-[#DAF9A0] mt-0.5 shrink-0" />
-                <a href="mailto:hello@rudo.co.uk" className="text-white/70 hover:text-[#DAF9A0] transition-colors text-sm">
+                <Mail size={18} className="text-primary-soft mt-0.5 shrink-0" />
+                <a href="mailto:hello@rudo.co.uk" className="text-white/70 hover:text-primary-soft transition-colors text-sm">
                   hello@rudo.co.uk
                 </a>
               </li>
               <li className="flex items-start gap-3">
-                <Phone size={18} className="text-[#DAF9A0] mt-0.5 shrink-0" />
-                <a href="tel:+441234567890" className="text-white/70 hover:text-[#DAF9A0] transition-colors text-sm">
+                <Phone size={18} className="text-primary-soft mt-0.5 shrink-0" />
+                <a href="tel:+441234567890" className="text-white/70 hover:text-primary-soft transition-colors text-sm">
                   +44 123 456 7890
                 </a>
               </li>
               <li className="flex items-start gap-3">
-                <MapPin size={18} className="text-[#DAF9A0] mt-0.5 shrink-0" />
+                <MapPin size={18} className="text-primary-soft mt-0.5 shrink-0" />
                 <span className="text-white/70 text-sm">
                   London, United Kingdom
                 </span>
@@ -151,13 +156,13 @@ export function Footer() {
               © {new Date().getFullYear()} Rudo. All rights reserved.
             </p>
             <div className="flex flex-wrap gap-6 text-sm">
-              <Link href="#" className="text-white/60 hover:text-[#DAF9A0] transition-colors">
+              <Link href="#" className="text-white/60 hover:text-primary-soft transition-colors">
                 Privacy Policy
               </Link>
-              <Link href="#" className="text-white/60 hover:text-[#DAF9A0] transition-colors">
+              <Link href="#" className="text-white/60 hover:text-primary-soft transition-colors">
                 Terms of Service
               </Link>
-              <Link href="#" className="text-white/60 hover:text-[#DAF9A0] transition-colors">
+              <Link href="#" className="text-white/60 hover:text-primary-soft transition-colors">
                 Cookie Policy
               </Link>
             </div>

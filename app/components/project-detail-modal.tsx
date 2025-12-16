@@ -94,11 +94,11 @@ export function ProjectDetailModal({ project, isOpen, onClose }: ProjectDetailMo
               {/* Header */}
               <div className="sticky top-0 bg-white rounded-t-3xl px-3 md:px-4 py-3 border-b border-gray-200 z-10 flex items-center justify-between">
                 <div className="flex-1">
-                  <h2 className="text-3xl md:text-4xl font-bold text-[#101703] mb-">
+                  <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-">
                     {project.name}
                   </h2>
                   <div className="flex items-center gap-4">
-                    <span className="text-sm font-medium text-[#101703]/60 bg-[#DAF9A0] px-3 py-1 rounded-full">
+                    <span className="text-sm font-medium text-foreground/60 bg-[#DAF9A0] px-3 py-1 rounded-full">
                       {project.category}
                     </span>
                     {project.url && (
@@ -106,7 +106,7 @@ export function ProjectDetailModal({ project, isOpen, onClose }: ProjectDetailMo
                         href={project.url}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-sm text-[#101703]/60 hover:text-[#101703] flex items-center gap-1 transition-colors"
+                        className="text-sm text-foreground/60 hover:text-foreground flex items-center gap-1 transition-colors"
                       >
                         <ExternalLink size={16} />
                         Visit Website
@@ -118,7 +118,7 @@ export function ProjectDetailModal({ project, isOpen, onClose }: ProjectDetailMo
                   onClick={onClose}
                   className="w-10 h-10 rounded-full bg-gray-100 hover:bg-gray-200 flex items-center justify-center transition-colors ml-4"
                 >
-                  <X size={20} className="text-[#101703]" />
+                  <X size={20} className="text-foreground" />
                 </button>
               </div>
 
@@ -142,7 +142,7 @@ export function ProjectDetailModal({ project, isOpen, onClose }: ProjectDetailMo
                               onClick={prevImage}
                               className="absolute left-4 top-1/2 -translate-y-1/2 w-16 h-12 rounded-full bg-white/90 hover:bg-white shadow-lg flex items-center justify-center transition-all z-10"
                             >
-                              <ChevronLeft size={24} className="text-[#101703]" />
+                              <ChevronLeft size={24} className="text-foreground" />
                             </button>
                           )}
                           {currentImageIndex < projectImages.length - 1 && (
@@ -150,7 +150,7 @@ export function ProjectDetailModal({ project, isOpen, onClose }: ProjectDetailMo
                               onClick={nextImage}
                               className="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-white/90 hover:bg-white shadow-lg flex items-center justify-center transition-all z-10"
                             >
-                              <ChevronRight size={24} className="text-[#101703]" />
+                              <ChevronRight size={24} className="text-foreground" />
                             </button>
                           )}
                         </>
@@ -191,7 +191,7 @@ export function ProjectDetailModal({ project, isOpen, onClose }: ProjectDetailMo
 
                 {/* Project Description */}
                 <div className="space-y-4">
-                  <h3 className="text-2xl font-bold text-[#101703]">About This Project</h3>
+                  <h3 className="text-2xl font-bold text-foreground">About This Project</h3>
                   <p className="text-lg text-gray-700 leading-relaxed">
                     {project.description}
                   </p>

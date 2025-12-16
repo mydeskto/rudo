@@ -15,11 +15,11 @@ export default function CaseStudiesPage() {
     : projects.filter(project => project.category === activeCategory);
 
   return (
-    <div className="min-h-screen bg-[#DAF9A0] font-sans">
+    <div className="min-h-screen bg-primary-soft font-sans">
       {/* Main Content */}
       <section className="pt-32 pb-20 px-6 max-w-7xl mx-auto">
         {/* Heading */}
-        <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-[#101703] text-center mb-16 tracking-tight">
+        <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-foreground text-center mb-16 tracking-tight">
           our recent projects
         </h1>
 
@@ -32,8 +32,8 @@ export default function CaseStudiesPage() {
               className={`
                 text-sm md:text-base font-medium transition-all duration-200
                 ${activeCategory === category
-                  ? "text-[#101703] font-bold"
-                  : "text-[#101703]/50 hover:text-[#101703]/70"
+                  ? "text-foreground font-bold"
+                  : "text-foreground/50 hover:text-foreground/70"
                 }
               `}
             >
@@ -77,14 +77,14 @@ export default function CaseStudiesPage() {
                           window.open(project.url, '_blank');
                         }}
                       >
-                        <ArrowUpRight size={20} className="text-[#101703]" />
+                        <ArrowUpRight size={20} className="text-foreground" />
                       </div>
                     )}
                   </div>
-                  <h3 className="text-2xl font-bold text-[#101703] mb-2 group-hover:text-[#101703]/70 transition-colors">
+                  <h3 className="text-2xl font-bold text-foreground mb-2 group-hover:text-foreground/70 transition-colors">
                     {project.name}
                   </h3>
-                  <p className="text-[#101703]/60 text-base">
+                  <p className="text-foreground/60 text-base">
                     {project.description}
                   </p>
                 </Link>
@@ -96,7 +96,7 @@ export default function CaseStudiesPage() {
         {/* Empty State */}
         {filteredProjects.length === 0 && (
           <div className="text-center py-20">
-            <p className="text-[#101703]/60 text-lg">
+            <p className="text-foreground/60 text-lg">
               No projects found in this category.
             </p>
           </div>
@@ -105,16 +105,16 @@ export default function CaseStudiesPage() {
 
       {/* CTA Section */}
       <section className="py-20 px-6 max-w-7xl mx-auto">
-        <div className="bg-[#101703] rounded-[3rem] p-12 md:p-16 text-center">
+        <div className="bg-foreground rounded-[3rem] p-12 md:p-16 text-center">
           <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
             Ready to work with us?
           </h2>
           <p className="text-white/80 mb-8 max-w-2xl mx-auto">
-            Let's discuss your website development project and see how we can help bring your vision to life.
+            Let's discuss your website development project, WordPress needs, or SEO requirements. We build custom websites, create WordPress solutions, and optimize for search engines to help bring your vision to life.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/contact">
-              <Button className="h-14 px-8 rounded-full bg-[#DAF9A0] text-[#101703] hover:bg-[#c5e885] text-lg font-bold">
+              <Button className="h-14 px-8 rounded-full bg-primary-soft text-foreground hover:bg-[#c5e885] text-lg font-bold">
                 Get in Touch
               </Button>
             </Link>

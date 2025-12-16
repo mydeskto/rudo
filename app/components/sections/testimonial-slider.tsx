@@ -10,21 +10,35 @@ const testimonials = [
     quote: "They delivered a complete website from frontend to backend. Impressive technical expertise.",
     author: "Deborah O'Sullivan",
     role: "Director, Ten2Two",
-    color: "#E0B0FF" // Lilac/Purple from image
+    color: "#007AFF" // Apple Blue
   },
   {
     id: 2,
     quote: "Exceptional website development. The final result exceeded our expectations.",
     author: "Hayley Van Leeuwan",
     role: "Director of Product, Voyager Worldwide",
-    color: "#DAF9A0" // Green
+    color: "#5AC8FA" // Sky Blue
   },
   {
     id: 3,
     quote: "Their efficiency and approach are unrivaled. They handled frontend and backend seamlessly.",
     author: "Andrew Mabbitt",
     role: "Director, Computer & Network Security Firm",
-    color: "#FFD700" // Yellowish
+    color: "#6366F1" // Growth Green
+  },
+  {
+    id: 4,
+    quote: "Outstanding WordPress development. Custom theme and SEO optimization significantly improved our site's performance.",
+    author: "Sarah Johnson",
+    role: "CEO, Tech Solutions Inc.",
+    color: "#22C55E" // Growth Green
+  },
+  {
+    id: 5,
+    quote: "Their SEO services helped us rank higher. Combined with excellent WordPress development, our traffic increased dramatically.",
+    author: "Michael Chen",
+    role: "Marketing Director, Digital Agency",
+    color: "#FF6B6B" // Coral Red
   }
 ];
 
@@ -56,7 +70,7 @@ export function TestimonialSlider() {
     <section className="py-20 px-6 max-w-7xl mx-auto">
       <div 
         ref={containerRef}
-        className="relative h-[400px] md:h-[500px] w-full cursor-none group"
+        className="relative h-[250px] md:h-[350px] w-full cursor-none group"
         onClick={handleNext}
         onMouseEnter={() => setIsHovering(true)}
         onMouseLeave={() => setIsHovering(false)}
@@ -80,22 +94,22 @@ export function TestimonialSlider() {
             animate={{ opacity: 1, scale: 1, x: 0, zIndex: 10 }}
             exit={{ opacity: 0, scale: 0.9, x: -20, zIndex: 0 }}
             transition={{ duration: 0.5, ease: "easeInOut" }}
-            className="absolute inset-0 rounded-[3rem] p-6 sm:p-8 md:p-16 flex flex-col justify-between shadow-sm"
+            className="absolute inset-0 rounded-[3rem] p-4 sm:p-6 md:p-8 flex flex-col justify-between shadow-sm"
             style={{ backgroundColor: currentTestimonial.color }}
           >
             <div>
-              <Quote className="w-8 h-8 md:w-12 md:h-12 text-[#101703] opacity-20 mb-4 md:mb-8" />
-              <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-5xl font-bold text-[#101703] leading-tight max-w-4xl select-none">
+              <Quote className="w-8 h-8 md:w-12 md:h-12 text-foreground opacity-20 mb-4 md:mb-8" />
+              <h3 className="text-lg sm:text-xl md:text-2xl lg:text-4xl font-bold text-foreground leading-tight max-w-4xl select-none">
                 {currentTestimonial.quote}
               </h3>
             </div>
             
             <div className="flex items-end justify-between select-none">
               <div>
-                <p className="text-[#101703] font-bold text-sm md:text-lg">
+                <p className="text-foreground font-bold text-xs md:text-sm">
                   — {currentTestimonial.author}
                 </p>
-                <p className="text-[#101703]/70 text-xs md:text-base">
+                <p className="text-foreground/70 text-xs md:text-sm">
                   {currentTestimonial.role}
                 </p>
               </div>
@@ -111,7 +125,7 @@ export function TestimonialSlider() {
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0, opacity: 0 }}
               transition={{ type: "spring", stiffness: 300, damping: 20 }}
-              className="absolute z-50 w-24 h-24 rounded-full bg-[#101703] text-white flex items-center justify-center font-bold text-xs tracking-widest pointer-events-none shadow-2xl"
+              className="absolute z-50 w-24 h-24 rounded-full bg-foreground text-white flex items-center justify-center font-bold text-xs tracking-widest pointer-events-none shadow-2xl"
               style={{ 
                 left: mousePos.x, 
                 top: mousePos.y,

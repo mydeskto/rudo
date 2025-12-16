@@ -43,43 +43,68 @@
   --color-chart-4: hsl(var(--chart-4));
   --color-chart-5: hsl(var(--chart-5));
   
+  /* New color schema variables */
+  --color-bg-main: hsl(var(--bg-main));
+  --color-bg-section: hsl(var(--bg-section));
+  --color-bg-soft: hsl(var(--bg-soft));
+  --color-text-primary: hsl(var(--text-primary));
+  --color-text-secondary: hsl(var(--text-secondary));
+  --color-text-muted: hsl(var(--text-muted));
+  --color-border-light: hsl(var(--border-light));
+  --color-border-soft: hsl(var(--border-soft));
+  --color-primary-hover: hsl(var(--primary-hover));
+  --color-primary-soft: hsl(var(--primary-soft));
+  
+  /* Additional utility colors */
+  --color-soft: hsl(var(--bg-soft));
+  --color-secondary-text: hsl(var(--text-secondary));
+  --color-muted-text: hsl(var(--text-muted));
+  
   --font-sans: "Plus Jakarta Sans", sans-serif;
   --font-heading: "Poppins", sans-serif;
 }
 
 :root {
-  /* Branding Colors */
-  /* Primary Dark: #101703 -> 82 77% 5% */
-  /* Accent Green: #DAF9A0 -> 81 88% 80% */
-  /* Background Light: #F1F1F1 -> 0 0% 95% */
+  /* New Color Schema - Direct HSL values */
+  --bg-main: 210 20% 98%; /* #F9FAFB */
+  --bg-section: 0 0% 100%; /* #FFFFFF */
+  --bg-soft: 210 40% 96%; /* #F1F5F9 */
+  --text-primary: 222 47% 11%; /* #0F172A */
+  --text-secondary: 215 16% 47%; /* #64748B */
+  --text-muted: 215 20% 65%; /* #94A3B8 */
+  --border-light: 220 13% 91%; /* #E5E7EB */
+  --border-soft: 214 32% 91%; /* #CBD5E1 */
+  --primary: 210 100% 50%; /* #007AFF */
+  --primary-hover: 210 100% 40%; /* #005FCC */
+  --primary-soft: 210 100% 95%; /* #E6F0FF */
   
-  --background: 0 0% 95%; /* #F1F1F1 */
-  --foreground: 82 77% 5%; /* #101703 */
+  /* Mapped to Tailwind system - using direct HSL values */
+  --background: 210 20% 98%; /* --bg-main */
+  --foreground: 222 47% 11%; /* --text-primary */
 
-  --card: 0 0% 100%;
-  --card-foreground: 82 77% 5%;
+  --card: 0 0% 100%; /* --bg-section */
+  --card-foreground: 222 47% 11%; /* --text-primary */
 
-  --popover: 0 0% 100%;
-  --popover-foreground: 82 77% 5%;
+  --popover: 0 0% 100%; /* --bg-section */
+  --popover-foreground: 222 47% 11%; /* --text-primary */
 
-  --primary: 82 77% 5%; /* #101703 */
-  --primary-foreground: 81 88% 80%; /* #DAF9A0 */
+  --primary-foreground: 0 0% 100%; /* White text on primary */
 
-  --secondary: 0 0% 100%;
-  --secondary-foreground: 82 77% 5%;
+  --secondary: 210 40% 96%; /* --bg-soft */
+  --secondary-foreground: 222 47% 11%; /* --text-primary */
 
-  --muted: 0 0% 90%;
-  --muted-foreground: 82 10% 40%;
+  --muted: 210 40% 96%; /* --bg-soft */
+  --muted-foreground: 215 20% 65%; /* --text-muted */
 
-  --accent: 81 88% 80%; /* #DAF9A0 */
-  --accent-foreground: 82 77% 5%;
+  --accent: 210 100% 95%; /* --primary-soft */
+  --accent-foreground: 222 47% 11%; /* --text-primary */
 
   --destructive: 0 84% 60%;
   --destructive-foreground: 0 0% 98%;
 
-  --border: 0 0% 85%;
-  --input: 0 0% 85%;
-  --ring: 82 77% 5%;
+  --border: 214 32% 91%; /* --border-soft */
+  --input: 220 13% 91%; /* --border-light */
+  --ring: 210 100% 50%; /* --primary */
 
   --radius: 1rem; /* 16px */
 
@@ -91,33 +116,46 @@
 }
 
 .dark {
-  --background: 82 77% 5%;
-  --foreground: 0 0% 95%;
+  /* Dark mode using inverted scheme */
+  --bg-main: 222 47% 11%; /* #0F172A - text-primary becomes bg */
+  --bg-section: 222 47% 8%; /* Darker section */
+  --bg-soft: 222 47% 15%; /* Darker soft bg */
+  --text-primary: 0 0% 98%; /* Light text */
+  --text-secondary: 215 20% 65%; /* #94A3B8 */
+  --text-muted: 215 16% 47%; /* #64748B */
+  --border-light: 222 47% 20%;
+  --border-soft: 222 47% 25%;
+  --primary: 210 100% 50%; /* #007AFF - keep primary same */
+  --primary-hover: 210 100% 60%; /* Lighter hover in dark */
+  --primary-soft: 210 100% 15%; /* Darker soft in dark mode */
+  
+  /* Mapped to Tailwind system - using direct HSL values */
+  --background: 222 47% 11%; /* --bg-main */
+  --foreground: 0 0% 98%; /* --text-primary */
 
-  --card: 82 77% 8%;
-  --card-foreground: 0 0% 95%;
+  --card: 222 47% 8%; /* --bg-section */
+  --card-foreground: 0 0% 98%; /* --text-primary */
 
-  --popover: 82 77% 5%;
-  --popover-foreground: 0 0% 95%;
+  --popover: 222 47% 8%; /* --bg-section */
+  --popover-foreground: 0 0% 98%; /* --text-primary */
 
-  --primary: 81 88% 80%; /* Accent becomes primary in dark mode context sometimes */
-  --primary-foreground: 82 77% 5%;
+  --primary-foreground: 0 0% 100%; /* White text on primary */
 
-  --secondary: 82 77% 15%;
-  --secondary-foreground: 0 0% 98%;
+  --secondary: 222 47% 15%; /* --bg-soft */
+  --secondary-foreground: 0 0% 98%; /* --text-primary */
 
-  --muted: 82 77% 15%;
-  --muted-foreground: 82 10% 60%;
+  --muted: 222 47% 15%; /* --bg-soft */
+  --muted-foreground: 215 16% 47%; /* --text-muted */
 
-  --accent: 82 77% 15%;
-  --accent-foreground: 0 0% 98%;
+  --accent: 210 100% 15%; /* --primary-soft */
+  --accent-foreground: 0 0% 98%; /* --text-primary */
 
   --destructive: 0 62% 30%;
   --destructive-foreground: 0 0% 98%;
 
-  --border: 82 77% 15%;
-  --input: 82 77% 15%;
-  --ring: 81 88% 80%;
+  --border: 222 47% 25%; /* --border-soft */
+  --input: 222 47% 20%; /* --border-light */
+  --ring: 210 100% 50%; /* --primary */
 }
 
 @layer base {

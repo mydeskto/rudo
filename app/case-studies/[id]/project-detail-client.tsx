@@ -42,9 +42,9 @@ export function ProjectDetailClient() {
 
   if (!project) {
     return (
-      <div className="min-h-screen bg-[#F1F1F1] flex items-center justify-center">
+      <div className="min-h-screen bg-background flex items-center justify-center">
         <div className="text-center">
-          <h1 className="text-4xl font-bold text-[#101703] mb-4">Project Not Found</h1>
+          <h1 className="text-4xl font-bold text-foreground mb-4">Project Not Found</h1>
           <Link href="/case-studies">
             <Button className="mt-4">Back to Projects</Button>
           </Link>
@@ -66,12 +66,12 @@ export function ProjectDetailClient() {
   };
 
   return (
-    <div className="min-h-screen bg-[#F1F1F1] font-sans">
+    <div className="min-h-screen bg-background font-sans">
       {/* Header */}
       <div className="sticky top-0 bg-white border-b border-gray-200 z-50 px-6 py-4">
         <div className="max-w-7xl mx-auto flex items-center justify-between">
           <Link href="/case-studies">
-            <Button variant="ghost" className="flex items-center gap-2 text-[#101703] hover:bg-gray-100">
+            <Button variant="ghost" className="flex items-center gap-2 text-foreground hover:bg-gray-100">
               <ArrowLeft size={20} />
               Back to Projects
             </Button>
@@ -79,7 +79,7 @@ export function ProjectDetailClient() {
           {project.url && (
             <Button
               onClick={() => window.open(project.url, '_blank')}
-              className="bg-[#101703] text-white hover:bg-[#101703]/90 flex items-center gap-2"
+              className="bg-foreground text-white hover:bg-foreground/90 flex items-center gap-2"
             >
               Visit Website
               <ExternalLink size={18} />
@@ -98,11 +98,11 @@ export function ProjectDetailClient() {
           className="mb-6"
         >
           <div className="flex items-center gap-4 mb-4">
-            <span className="text-sm font-medium text-[#101703]/60 bg-[#DAF9A0] px-4 py-2 rounded-full">
+            <span className="text-sm font-medium text-foreground/60 bg-primary-soft px-4 py-2 rounded-full">
               {project.category}
             </span>
           </div>
-          <h1 className="text-4xl md:text-6xl font-bold text-[#101703] mb-6">
+          <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-6">
             {project.name}
           </h1>
           <p className="text-xl text-gray-700 leading-relaxed max-w-3xl">
@@ -133,7 +133,7 @@ export function ProjectDetailClient() {
                       onClick={prevImage}
                       className="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-white/90 hover:bg-white shadow-lg flex items-center justify-center transition-all z-10"
                     >
-                      <ChevronLeft size={24} className="text-[#101703]" />
+                      <ChevronLeft size={24} className="text-foreground" />
                     </button>
                   )}
                   {currentImageIndex < projectImages.length - 1 && (
@@ -141,7 +141,7 @@ export function ProjectDetailClient() {
                       onClick={nextImage}
                       className="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-white/90 hover:bg-white shadow-lg flex items-center justify-center transition-all z-10"
                     >
-                      <ChevronRight size={24} className="text-[#101703]" />
+                      <ChevronRight size={24} className="text-foreground" />
                     </button>
                   )}
                 </>
@@ -164,7 +164,7 @@ export function ProjectDetailClient() {
                     onClick={() => setCurrentImageIndex(index)}
                     className={`shrink-0 w-24 h-16 rounded-lg overflow-hidden border-2 transition-all ${
                       currentImageIndex === index
-                        ? "border-[#101703] ring-2 ring-[#DAF9A0]"
+                        ? "border-foreground ring-2 ring-foreground/20"
                         : "border-transparent opacity-60 hover:opacity-100"
                     }`}
                   >
@@ -188,7 +188,7 @@ export function ProjectDetailClient() {
           className="bg-white rounded-3xl p-8 md:p-12 shadow-sm space-y-4"
         >
           <div>
-            <h2 className="text-2xl font-bold text-[#101703] mb-4">About This Project</h2>
+            <h2 className="text-2xl font-bold text-foreground mb-4">About This Project</h2>
             <p className="text-md text-gray-700 leading-relaxed">
               {project.detailedDescription || project.description}
             </p>
@@ -196,7 +196,7 @@ export function ProjectDetailClient() {
 
           {project.projectPurpose && (
             <div>
-              <h3 className="text-2xl font-bold text-[#101703] mb-4">Project Purpose</h3>
+              <h3 className="text-2xl font-bold text-foreground mb-4">Project Purpose</h3>
               <p className="text-md text-gray-700 leading-relaxed">
                 {project.projectPurpose}
               </p>
@@ -205,11 +205,11 @@ export function ProjectDetailClient() {
 
           {project.workDone && project.workDone.length > 0 && (
             <div>
-              <h3 className="text-2xl font-bold text-[#101703] mb-4">Our Work</h3>
+              <h3 className="text-2xl font-bold text-foreground mb-4">Our Work</h3>
               <ul className="space-y-3">
                 {project.workDone.map((work, index) => (
                   <li key={index} className="flex items-start gap-3">
-                    <span className="text-[#DAF9A0] font-bold mt-1 shrink-0">•</span>
+                    <span className="text-foreground font-bold mt-1 shrink-0">•</span>
                     <span className="text-md text-gray-700 leading-relaxed">{work}</span>
                   </li>
                 ))}
@@ -219,11 +219,11 @@ export function ProjectDetailClient() {
 
           {project.features && project.features.length > 0 && (
             <div>
-              <h3 className="text-2xl font-bold text-[#101703] mb-4">Key Features</h3>
+              <h3 className="text-2xl font-bold text-foreground mb-4">Key Features</h3>
               <div className="grid md:grid-cols-2 gap-3">
                 {project.features.map((feature, index) => (
                   <div key={index} className="flex items-start gap-3">
-                    <span className="text-[#DAF9A0] font-bold mt-1 shrink-0">✓</span>
+                    <span className="text-foreground font-bold mt-1 shrink-0">✓</span>
                     <span className="text-md text-gray-700">{feature}</span>
                   </div>
                 ))}
@@ -243,7 +243,7 @@ export function ProjectDetailClient() {
             <Button
               onClick={() => window.open(project.url, '_blank')}
               size="lg"
-              className="h-14 px-8 rounded-full bg-[#101703] text-white hover:bg-[#101703]/90 text-lg font-bold flex items-center justify-center gap-2 mx-auto"
+              className="h-14 px-8 rounded-full bg-foreground text-white hover:bg-foreground/90 text-lg font-bold flex items-center justify-center gap-2 mx-auto"
             >
               Visit Website
               <ExternalLink size={20} />

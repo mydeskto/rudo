@@ -243,13 +243,13 @@ export default function ProcessPage() {
   };
 
   return (
-    <div className="min-h-screen bg-[#F1F1F1] font-sans">
+    <div className="min-h-screen bg-background font-sans">
       {/* Hero Section */}
-      <section className="relative min-h-[20vh] bg-[#DAF9A0] text-[#101703] pt-26 pb-10 px-6 overflow-hidden flex flex-col justify-center items-center">
+      <section className="relative min-h-[20vh] bg-primary-soft text-foreground pt-26 pb-10 px-6 overflow-hidden flex flex-col justify-center items-center">
         {/* Background Effects */}
         <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
-          <div className="absolute top-[-20%] left-[10%] w-[60vw] h-[60vw] bg-[#101703]/5 rounded-full blur-[120px]" />
-          <div className="absolute bottom-[-10%] right-[-10%] w-[50vw] h-[50vw] bg-[#101703]/3 rounded-full blur-[100px]" />
+          <div className="absolute top-[-20%] left-[10%] w-[60vw] h-[60vw] bg-foreground/5 rounded-full blur-[120px]" />
+          <div className="absolute bottom-[-10%] right-[-10%] w-[50vw] h-[50vw] bg-foreground/3 rounded-full blur-[100px]" />
         </div>
 
         <div className="relative z-10 max-w-5xl mx-auto text-center flex flex-col items-center gap-8">
@@ -257,17 +257,17 @@ export default function ProcessPage() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3, duration: 0.8 }}
-            className="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.1] md:leading-[1.05] text-[#101703]"
+            className="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.1] md:leading-[1.05] text-foreground"
           >
             Our development <br className="hidden md:block" />
-            <span className="text-[#101703]">process</span>
+            <span className="text-foreground">process</span>
           </motion.h1>
 
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4, duration: 0.8 }}
-            className="max-w-md text-sm md:text-md text-[#101703]/80 leading-relaxed"
+            className="max-w-md text-sm md:text-md text-foreground/80 leading-relaxed"
           >
             Our full stack development process from discovery to launch. We build custom websites with frontend and backend development, tailored to your business needs.
           </motion.p>
@@ -294,7 +294,7 @@ export default function ProcessPage() {
                   viewport={{ once: true }}
                   transition={{ duration: 0.5 }}
                 >
-                  <h2 className="text-4xl md:text-5xl font-bold text-[#101703] mb-6">
+                  <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
                     {step.content.title}
                   </h2>
                   
@@ -318,11 +318,11 @@ export default function ProcessPage() {
                     )}
                     {step.content.details && (
                       <div className="mt-8 space-y-4">
-                        <h3 className="text-xl font-bold text-[#101703] mb-4">What This Includes:</h3>
+                        <h3 className="text-xl font-bold text-foreground mb-4">What This Includes:</h3>
                         <ul className="space-y-3">
                           {step.content.details.map((detail, idx) => (
                             <li key={idx} className="flex items-start gap-3">
-                              <span className="text-[#DAF9A0] font-bold mt-1 shrink-0">•</span>
+                              <span className="text-primary-soft font-bold mt-1 shrink-0">•</span>
                               <span>{detail}</span>
                             </li>
                           ))}
@@ -361,15 +361,15 @@ export default function ProcessPage() {
                         className={`
                           w-full flex items-center gap-2 p-2 rounded-xl transition-all duration-200 text-left relative z-10
                           ${isActive 
-                            ? "bg-[#DAF9A0] text-[#101703] font-bold shadow-sm" 
-                            : "text-gray-600 hover:bg-gray-50 hover:text-[#101703]"
+                            ? "bg-primary-soft text-foreground font-bold shadow-sm" 
+                            : "text-gray-600 hover:bg-gray-50 hover:text-foreground"
                           }
                         `}
                       >
                         <div className={`
                           w-10 h-10 rounded-full flex items-center justify-center flex-shrink-0 relative
                           ${isActive 
-                            ? "bg-[#101703] text-[#DAF9A0]" 
+                            ? "bg-foreground text-primary-soft" 
                             : "bg-gray-200 text-gray-600"
                           }
                         `}>
@@ -381,7 +381,7 @@ export default function ProcessPage() {
                         <div 
                           className={`
                             absolute left-[29px] top-[56px] w-0.5 h-8 z-0
-                            ${isActive ? "bg-[#101703]/20" : "bg-gray-200"}
+                            ${isActive ? "bg-foreground/20" : "bg-gray-200"}
                           `}
                         />
                       )}
@@ -394,7 +394,7 @@ export default function ProcessPage() {
         </div>
 
         {/* CTA Section */}
-        <div className="mt-20 bg-[#101703] rounded-[3rem] p-12 md:p-16 text-center">
+        <div className="mt-20 bg-foreground rounded-[3rem] p-12 md:p-16 text-center">
           <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
             Ready to work with us?
           </h2>
@@ -403,7 +403,7 @@ export default function ProcessPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/contact">
-              <Button className="h-14 px-8 rounded-full bg-[#DAF9A0] text-[#101703] hover:bg-[#c5e885] text-lg font-bold">
+              <Button className="h-14 px-8 rounded-full bg-primary-soft text-foreground hover:bg-primary-hover text-lg font-bold">
                 Get in Touch
               </Button>
             </Link>

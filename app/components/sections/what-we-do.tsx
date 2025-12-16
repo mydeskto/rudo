@@ -48,8 +48,8 @@ export function WhatWeDo() {
 
   return (
     <section className="py-20 px-6 max-w-[1400px] mx-auto">
-      <div className="bg-[#DAF9A0] rounded-[3rem] p-8 md:p-12">
-        <h2 className="text-4xl md:text-5xl font-bold text-[#101703] mb-12 tracking-tight">
+      <div className="bg-primary-soft rounded-[3rem] p-8 md:p-12">
+        <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-12 tracking-tight">
           what we do
         </h2>
 
@@ -63,8 +63,8 @@ export function WhatWeDo() {
                 className={cn(
                   "text-left px-8 py-6 rounded-2xl text-2xl font-bold transition-all duration-300",
                   activeTab.id === tab.id
-                    ? "bg-white text-[#101703] shadow-sm"
-                    : "bg-[#DAF9A0] text-[#101703]/40 hover:text-[#101703]/70 hover:bg-[#c5e885]"
+                    ? "bg-card text-foreground shadow-sm"
+                    : "bg-primary-soft text-foreground/40 hover:text-foreground/70 hover:bg-primary-soft/80"
                 )}
               >
                 {tab.label}
@@ -105,7 +105,7 @@ export function WhatWeDo() {
                 {/* Get In Touch Circle Button */}
                 <div className="absolute bottom-12 right-12 hidden md:flex flex-col items-center gap-2">
                    <span className="text-white text-xs font-bold tracking-widest uppercase">Get in Touch</span>
-                   <button className="w-20 h-20 rounded-full bg-[#DAF9A0] flex items-center justify-center text-[#101703] hover:scale-110 transition-transform duration-300">
+                   <button className="w-20 h-20 rounded-full bg-primary-soft flex items-center justify-center text-foreground hover:scale-110 transition-transform duration-300">
                      <ArrowUpRight size={32} />
                    </button>
                 </div>
@@ -117,36 +117,36 @@ export function WhatWeDo() {
         {/* Bottom Cards Grid */}
         <div className="grid md:grid-cols-3 gap-6">
           {/* Website Design Card */}
-          <div className="bg-white rounded-[2rem] p-8 min-h-[300px] flex flex-col justify-between hover:scale-[1.02] transition-transform duration-300">
+          <div className="bg-card rounded-[2rem] p-8 min-h-[300px] flex flex-col justify-between hover:scale-[1.02] transition-transform duration-300">
             <div>
-              <h3 className="text-2xl font-bold text-[#101703] mb-4">Website Design</h3>
-              <p className="text-gray-600 text-sm leading-relaxed">
+              <h3 className="text-2xl font-bold text-foreground mb-4">Website Design</h3>
+              <p className="text-muted-foreground text-sm leading-relaxed">
                 We create beautiful, user-friendly website designs that align with your brand. Our design process focuses on creating intuitive interfaces and engaging user experiences that convert visitors into customers.
               </p>
             </div>
-            <Palette className="w-8 h-8 text-[#101703]/20" />
+            <Palette className="w-8 h-8 text-foreground/20" />
           </div>
 
           {/* SEO Card */}
-          <div className="bg-white rounded-[2rem] p-8 min-h-[300px] flex flex-col justify-between hover:scale-[1.02] transition-transform duration-300">
+          <div className="bg-card rounded-[2rem] p-8 min-h-[300px] flex flex-col justify-between hover:scale-[1.02] transition-transform duration-300">
             <div>
-              <h3 className="text-2xl font-bold text-[#101703] mb-4">SEO Services</h3>
-              <p className="text-gray-600 text-sm leading-relaxed">
+              <h3 className="text-2xl font-bold text-foreground mb-4">SEO Services</h3>
+              <p className="text-muted-foreground text-sm leading-relaxed">
                 We offer comprehensive SEO services including On-Page SEO (content & meta optimization), Off-Page SEO (link building), Technical SEO (site speed & structure), and Local SEO (local visibility). We can optimize existing websites or include SEO best practices in new development projects.
               </p>
             </div>
-            <Search className="w-8 h-8 text-[#101703]/20" />
+            <Search className="w-8 h-8 text-foreground/20" />
           </div>
 
           {/* WordPress Design Card */}
-          <div className="bg-white rounded-[2rem] p-8 min-h-[300px] flex flex-col justify-between hover:scale-[1.02] transition-transform duration-300">
+          <div className="bg-card rounded-[2rem] p-8 min-h-[300px] flex flex-col justify-between hover:scale-[1.02] transition-transform duration-300">
             <div>
-              <h3 className="text-2xl font-bold text-[#101703] mb-4">WordPress Design</h3>
-              <p className="text-gray-600 text-sm leading-relaxed">
+              <h3 className="text-2xl font-bold text-foreground mb-4">WordPress Design</h3>
+              <p className="text-muted-foreground text-sm leading-relaxed">
                 We create custom WordPress websites with beautiful designs and powerful functionality. From theme customization to plugin development, we build WordPress sites that are fast, secure, and easy to manage.
               </p>
             </div>
-            <MousePointer2 className="w-8 h-8 text-[#101703]/20" />
+            <MousePointer2 className="w-8 h-8 text-foreground/20" />
           </div>
         </div>
       </div>
