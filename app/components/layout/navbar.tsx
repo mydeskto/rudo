@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Menu, X, Cloud, Building2, Factory, HeartPulse, Users, Wallet, ChevronDown } from "lucide-react";
+import { Menu, X, Cloud, Building2, Factory, HeartPulse, Users, Wallet, ChevronDown, Code, FileCode, Globe, Smartphone, Server, Shield } from "lucide-react";
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
@@ -16,6 +16,8 @@ export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [activeMenu, setActiveMenu] = useState<string | null>(null);
+  const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
+  const [mobileTechnologiesOpen, setMobileTechnologiesOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -62,7 +64,7 @@ export function Navbar() {
 
         {/* Desktop Nav - Custom Full Width Menu */}
         <div className="hidden lg:flex items-center gap-8">
-            {/* By Industry Trigger */}
+            {/* Services Trigger */}
             <button 
               onMouseEnter={() => setActiveMenu('industry')}
               className={cn(
@@ -71,10 +73,10 @@ export function Navbar() {
                 activeMenu === 'industry' && "text-foreground"
               )}
             >
-              by Industry <ChevronDown size={14} className={cn("transition-transform duration-200", activeMenu === 'industry' && "rotate-180")} />
+              Services <ChevronDown size={14} className={cn("transition-transform duration-200", activeMenu === 'industry' && "rotate-180")} />
             </button>
 
-            {/* By CMS Trigger */}
+            {/* Technologies Trigger */}
             <button 
               onMouseEnter={() => setActiveMenu('cms')}
               className={cn(
@@ -83,7 +85,7 @@ export function Navbar() {
                  activeMenu === 'cms' && "text-foreground"
               )}
             >
-              by CMS <ChevronDown size={14} className={cn("transition-transform duration-200", activeMenu === 'cms' && "rotate-180")} />
+              Technologies <ChevronDown size={14} className={cn("transition-transform duration-200", activeMenu === 'cms' && "rotate-180")} />
             </button>
 
             <Link href="/about" className={cn("text-sm font-medium transition-colors", shouldUseBlackText ? "text-foreground hover:text-primary-hover" : "text-white hover:text-primary-soft")} onMouseEnter={() => setActiveMenu(null)}>
@@ -111,27 +113,27 @@ export function Navbar() {
            </Link>
            <div className="flex items-center gap-3">
             <Link href="/action-plan">
-              <Button 
-                variant="outline" 
-                className={cn(
+            <Button 
+              variant="outline" 
+              className={cn(
                   "rounded-lg px-6 h-11 text-sm font-medium border transition-all duration-300",
                   shouldUseBlackText
                     ? "border-foreground/10 bg-foreground/5 text-foreground hover:bg-primary-soft hover:border-primary-soft hover:text-foreground hover:shadow-md" 
                     : "border-white/20 bg-transparent text-white hover:bg-primary-soft hover:border-primary-soft hover:text-foreground hover:shadow-md"
-                )}
-              >
-                Action Plan
-              </Button>
+              )}
+            >
+              Action Plan
+            </Button>
             </Link>
             <Link href="/contact">
-              <Button 
-                className={cn(
-                   "rounded-lg px-6 h-11 text-sm font-semibold transition-colors",
+            <Button 
+              className={cn(
+                 "rounded-lg px-6 h-11 text-sm font-semibold transition-colors",
                    "bg-foreground text-white hover:bg-foreground/90" // Always dark button as per screenshot
-                )}
-              >
-                Contact
-              </Button>
+              )}
+            >
+              Contact
+            </Button>
             </Link>
            </div>
         </div>
@@ -160,61 +162,61 @@ export function Navbar() {
                 {activeMenu === 'industry' && (
                   <div className="grid grid-cols-[1fr_2fr] gap-20">
                     <div className="space-y-4 max-w-sm">
-                      <h4 className="text-2xl font-bold text-foreground">Our Focus Industries</h4>
+                      <h4 className="text-2xl font-bold text-foreground">Our Services</h4>
                       <p className="text-gray-600 leading-relaxed text-sm">
-                        We understand that every industry has unique needs. Our tailored approach ensures your website is designed to resonate with your audience, deliver measurable results, and support your business goals.
+                        We provide comprehensive website development services from frontend to backend. Our full stack expertise ensures complete, scalable solutions tailored to your business needs.
                       </p>
                     </div>
                     
                     <div className="grid grid-cols-2 gap-x-12 gap-y-10">
                        {/* Column 1 */}
                        <div className="space-y-8">
-                          <a href="#" className="flex gap-4 group">
+                          <Link href="/services/full-stack-development" className="flex gap-4 group">
                             <Cloud className="w-5 h-5 text-foreground mt-1 shrink-0 group-hover:text-primary-hover transition-colors" />
                             <div>
-                              <h5 className="font-bold text-foreground text-base mb-1 group-hover:text-primary-hover transition-colors">Tech & SaaS</h5>
-                              <p className="text-xs text-gray-500">Build a website for tech business</p>
+                              <h5 className="font-bold text-foreground text-base mb-1 group-hover:text-primary-hover transition-colors">Full Stack Development</h5>
+                              <p className="text-xs text-gray-500">Complete website development from frontend to backend</p>
                             </div>
-                          </a>
-                          <a href="#" className="flex gap-4 group">
+                          </Link>
+                          <Link href="/services/wordpress-design" className="flex gap-4 group">
                             <Factory className="w-5 h-5 text-foreground mt-1 shrink-0 group-hover:text-primary-hover transition-colors" />
                             <div>
-                              <h5 className="font-bold text-foreground text-base mb-1 group-hover:text-primary-hover transition-colors">Manufacturing</h5>
-                              <p className="text-xs text-gray-500">Build a website for manufacturing business</p>
+                              <h5 className="font-bold text-foreground text-base mb-1 group-hover:text-primary-hover transition-colors">WordPress Design</h5>
+                              <p className="text-xs text-gray-500">Custom WordPress themes, plugins, and WooCommerce</p>
                             </div>
-                          </a>
-                          <a href="#" className="flex gap-4 group">
+                          </Link>
+                          <Link href="/services/seo-services" className="flex gap-4 group">
                             <Users className="w-5 h-5 text-foreground mt-1 shrink-0 group-hover:text-primary-hover transition-colors" />
                             <div>
-                              <h5 className="font-bold text-foreground text-base mb-1 group-hover:text-primary-hover transition-colors">Recruitment</h5>
-                              <p className="text-xs text-gray-500">Build a website for recruitment business</p>
+                              <h5 className="font-bold text-foreground text-base mb-1 group-hover:text-primary-hover transition-colors">SEO Services</h5>
+                              <p className="text-xs text-gray-500">On-Page, Off-Page, Technical, and Local SEO</p>
                             </div>
-                          </a>
+                          </Link>
                        </div>
                        
                        {/* Column 2 */}
                        <div className="space-y-8">
-                          <a href="#" className="flex gap-4 group">
+                          <Link href="/services/frontend-development" className="flex gap-4 group">
                             <Building2 className="w-5 h-5 text-foreground mt-1 shrink-0 group-hover:text-primary-hover transition-colors" />
                             <div>
-                              <h5 className="font-bold text-foreground text-base mb-1 group-hover:text-primary-hover transition-colors">Property</h5>
-                              <p className="text-xs text-gray-500">Build a website for real estate business</p>
+                              <h5 className="font-bold text-foreground text-base mb-1 group-hover:text-primary-hover transition-colors">Frontend Development</h5>
+                              <p className="text-xs text-gray-500">Modern, responsive user interfaces with React & Next.js</p>
                             </div>
-                          </a>
-                          <a href="#" className="flex gap-4 group">
+                          </Link>
+                          <Link href="/services/backend-development" className="flex gap-4 group">
                             <HeartPulse className="w-5 h-5 text-foreground mt-1 shrink-0 group-hover:text-primary-hover transition-colors" />
                             <div>
-                              <h5 className="font-bold text-foreground text-base mb-1 group-hover:text-primary-hover transition-colors">Healthcare</h5>
-                              <p className="text-xs text-gray-500">Build a website for healthcare business</p>
+                              <h5 className="font-bold text-foreground text-base mb-1 group-hover:text-primary-hover transition-colors">Backend Development</h5>
+                              <p className="text-xs text-gray-500">Robust APIs, databases, and server-side systems</p>
                             </div>
-                          </a>
-                          <a href="#" className="flex gap-4 group">
+                          </Link>
+                          <Link href="/services/maintenance-support" className="flex gap-4 group">
                             <Wallet className="w-5 h-5 text-foreground mt-1 shrink-0 group-hover:text-primary-hover transition-colors" />
                             <div>
-                              <h5 className="font-bold text-foreground text-base mb-1 group-hover:text-primary-hover transition-colors">Financial Services</h5>
-                              <p className="text-xs text-gray-500">Build a website for financial business</p>
+                              <h5 className="font-bold text-foreground text-base mb-1 group-hover:text-primary-hover transition-colors">Maintenance & Support</h5>
+                              <p className="text-xs text-gray-500">Ongoing updates, security, and technical support</p>
                             </div>
-                          </a>
+                          </Link>
                        </div>
                     </div>
                   </div>
@@ -223,43 +225,62 @@ export function Navbar() {
                 {activeMenu === 'cms' && (
                   <div className="grid grid-cols-[1fr_2fr] gap-20">
                     <div className="space-y-4 max-w-sm">
-                      <h4 className="text-2xl font-bold text-foreground">Platforms</h4>
+                      <h4 className="text-2xl font-bold text-foreground">Technologies We Use</h4>
                       <p className="text-gray-600 leading-relaxed text-sm">
-                        Choosing the right CMS platform is essential for the project success. We work with time-tested platforms, delivering tailored solutions for seamless updates, scalability, and performance. Our expertise ensures measurable results and a user-friendly experience.
+                        We work with modern technologies and platforms to build fast, scalable, and maintainable websites. Our expertise spans from content management systems to cutting-edge frameworks.
                       </p>
                     </div>
                     
-                    <div className="grid grid-cols-1 gap-y-10 max-w-md">
-                        <a href="#" className="flex gap-4 group">
-                          {/* HubSpot Icon Mock */}
-                          <svg className="w-6 h-6 text-foreground shrink-0 group-hover:text-primary-hover transition-colors" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z"/>
-                          </svg>
+                    <div className="grid grid-cols-2 gap-x-12 gap-y-10">
+                       {/* Column 1 */}
+                       <div className="space-y-8">
+                          <Link href="/technologies/wordpress" className="flex gap-4 group">
+                            <FileCode className="w-5 h-5 text-foreground mt-1 shrink-0 group-hover:text-primary-hover transition-colors" />
+                            <div>
+                              <h5 className="font-bold text-foreground text-base mb-1 group-hover:text-primary-hover transition-colors">WordPress</h5>
+                              <p className="text-xs text-gray-500">Custom themes, plugins, and WooCommerce</p>
+                            </div>
+                          </Link>
+                          <Link href="/technologies/react-nextjs" className="flex gap-4 group">
+                            <Code className="w-5 h-5 text-foreground mt-1 shrink-0 group-hover:text-primary-hover transition-colors" />
+                            <div>
+                              <h5 className="font-bold text-foreground text-base mb-1 group-hover:text-primary-hover transition-colors">React & Next.js</h5>
+                              <p className="text-xs text-gray-500">Modern frontend frameworks for fast websites</p>
+                            </div>
+                          </Link>
+                          <Link href="/technologies/nodejs" className="flex gap-4 group">
+                            <Server className="w-5 h-5 text-foreground mt-1 shrink-0 group-hover:text-primary-hover transition-colors" />
+                            <div>
+                              <h5 className="font-bold text-foreground text-base mb-1 group-hover:text-primary-hover transition-colors">Node.js</h5>
+                              <p className="text-xs text-gray-500">Robust backend development and APIs</p>
+                            </div>
+                          </Link>
+                       </div>
+                       
+                       {/* Column 2 */}
+                       <div className="space-y-8">
+                          <Link href="/technologies/typescript" className="flex gap-4 group">
+                            <Smartphone className="w-5 h-5 text-foreground mt-1 shrink-0 group-hover:text-primary-hover transition-colors" />
                           <div>
-                            <h5 className="font-bold text-foreground text-base mb-1 group-hover:text-primary-hover transition-colors">HubSpot</h5>
-                            <p className="text-xs text-gray-500">Build a website in HubSpot Content Hub</p>
+                              <h5 className="font-bold text-foreground text-base mb-1 group-hover:text-primary-hover transition-colors">TypeScript</h5>
+                              <p className="text-xs text-gray-500">Type-safe development for reliability</p>
                           </div>
-                        </a>
-                        <a href="#" className="flex gap-4 group">
-                          {/* Webflow Icon Mock */}
-                          <svg className="w-6 h-6 text-foreground shrink-0 group-hover:text-primary-hover transition-colors" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M12 2L2 22h20L12 2zm0 4l6.5 13h-13L12 6z"/>
-                          </svg>
+                          </Link>
+                          <Link href="/technologies/seo-tools" className="flex gap-4 group">
+                            <Globe className="w-5 h-5 text-foreground mt-1 shrink-0 group-hover:text-primary-hover transition-colors" />
                           <div>
-                            <h5 className="font-bold text-foreground text-base mb-1 group-hover:text-primary-hover transition-colors">WebFlow</h5>
-                            <p className="text-xs text-gray-500">Build a no-code website in WebFlow</p>
+                              <h5 className="font-bold text-foreground text-base mb-1 group-hover:text-primary-hover transition-colors">SEO Tools</h5>
+                              <p className="text-xs text-gray-500">Google Search Console, Analytics & more</p>
                           </div>
-                        </a>
-                        <a href="#" className="flex gap-4 group">
-                          {/* WordPress Icon Mock */}
-                          <svg className="w-6 h-6 text-foreground shrink-0 group-hover:text-primary-hover transition-colors" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14.5v-9l6 4.5-6 4.5z"/>
-                          </svg>
+                          </Link>
+                          <Link href="/technologies/security-performance" className="flex gap-4 group">
+                            <Shield className="w-5 h-5 text-foreground mt-1 shrink-0 group-hover:text-primary-hover transition-colors" />
                           <div>
-                            <h5 className="font-bold text-foreground text-base mb-1 group-hover:text-primary-hover transition-colors">WordPress</h5>
-                            <p className="text-xs text-gray-500">Build a custom WordPress Theme</p>
+                              <h5 className="font-bold text-foreground text-base mb-1 group-hover:text-primary-hover transition-colors">Security & Performance</h5>
+                              <p className="text-xs text-gray-500">Optimized, secure, and fast websites</p>
+                            </div>
+                          </Link>
                           </div>
-                        </a>
                     </div>
                   </div>
                 )}
@@ -270,30 +291,121 @@ export function Navbar() {
 
       {/* Mobile Menu (Overlay) */}
       {isMobileMenuOpen && (
-        <div className="fixed inset-0 bg-foreground z-40 flex flex-col items-center justify-center gap-8 p-4">
-          {["by Industry", "by CMS", "About", "Process", "Case Studies"].map((item) => (
-            <a
-              key={item}
-              href="#"
-              className="text-2xl font-medium text-white hover:text-primary-soft"
-              onClick={() => setIsMobileMenuOpen(false)}
-            >
-              {item}
-            </a>
-          ))}
+        <div className="fixed inset-0 bg-foreground z-40 flex flex-col pt-24 pb-6 px-6 overflow-y-auto">
+          <div className="max-w-md mx-auto w-full space-y-4">
+            <Link href="/" className="block text-xl font-medium text-white hover:text-primary-soft py-2" onClick={() => setIsMobileMenuOpen(false)}>
+              Home
+            </Link>
+            
+            {/* Services Dropdown */}
+            <div className="border-t border-white/10 pt-4">
+              <button
+                onClick={() => setMobileServicesOpen(!mobileServicesOpen)}
+                className="w-full flex items-center justify-between text-xl font-medium text-white hover:text-primary-soft py-2"
+              >
+                Services
+                <ChevronDown size={20} className={cn("transition-transform duration-200", mobileServicesOpen && "rotate-180")} />
+              </button>
+              {mobileServicesOpen && (
+                <motion.div
+                  initial={{ opacity: 0, height: 0 }}
+                  animate={{ opacity: 1, height: "auto" }}
+                  exit={{ opacity: 0, height: 0 }}
+                  className="mt-2 space-y-3 pl-4"
+                >
+                  <Link href="/services/full-stack-development" className="block text-base text-white/80 hover:text-primary-soft py-1" onClick={() => setIsMobileMenuOpen(false)}>
+                    Full Stack Development
+                  </Link>
+                  <Link href="/services/frontend-development" className="block text-base text-white/80 hover:text-primary-soft py-1" onClick={() => setIsMobileMenuOpen(false)}>
+                    Frontend Development
+                  </Link>
+                  <Link href="/services/backend-development" className="block text-base text-white/80 hover:text-primary-soft py-1" onClick={() => setIsMobileMenuOpen(false)}>
+                    Backend Development
+                  </Link>
+                  <Link href="/services/wordpress-design" className="block text-base text-white/80 hover:text-primary-soft py-1" onClick={() => setIsMobileMenuOpen(false)}>
+                    WordPress Design
+                  </Link>
+                  <Link href="/services/seo-services" className="block text-base text-white/80 hover:text-primary-soft py-1" onClick={() => setIsMobileMenuOpen(false)}>
+                    SEO Services
+                  </Link>
+                  <Link href="/services/maintenance-support" className="block text-base text-white/80 hover:text-primary-soft py-1" onClick={() => setIsMobileMenuOpen(false)}>
+                    Maintenance & Support
+                  </Link>
+                </motion.div>
+              )}
+            </div>
+
+            {/* Technologies Dropdown */}
+            <div className="border-t border-white/10 pt-4">
+              <button
+                onClick={() => setMobileTechnologiesOpen(!mobileTechnologiesOpen)}
+                className="w-full flex items-center justify-between text-xl font-medium text-white hover:text-primary-soft py-2"
+              >
+                Technologies
+                <ChevronDown size={20} className={cn("transition-transform duration-200", mobileTechnologiesOpen && "rotate-180")} />
+              </button>
+              {mobileTechnologiesOpen && (
+                <motion.div
+                  initial={{ opacity: 0, height: 0 }}
+                  animate={{ opacity: 1, height: "auto" }}
+                  exit={{ opacity: 0, height: 0 }}
+                  className="mt-2 space-y-3 pl-4"
+                >
+                  <Link href="/technologies/wordpress" className="block text-base text-white/80 hover:text-primary-soft py-1" onClick={() => setIsMobileMenuOpen(false)}>
+                    WordPress
+                  </Link>
+                  <Link href="/technologies/react-nextjs" className="block text-base text-white/80 hover:text-primary-soft py-1" onClick={() => setIsMobileMenuOpen(false)}>
+                    React & Next.js
+                  </Link>
+                  <Link href="/technologies/nodejs" className="block text-base text-white/80 hover:text-primary-soft py-1" onClick={() => setIsMobileMenuOpen(false)}>
+                    Node.js
+                  </Link>
+                  <Link href="/technologies/typescript" className="block text-base text-white/80 hover:text-primary-soft py-1" onClick={() => setIsMobileMenuOpen(false)}>
+                    TypeScript
+                  </Link>
+                  <Link href="/technologies/seo-tools" className="block text-base text-white/80 hover:text-primary-soft py-1" onClick={() => setIsMobileMenuOpen(false)}>
+                    SEO Tools
+                  </Link>
+                  <Link href="/technologies/security-performance" className="block text-base text-white/80 hover:text-primary-soft py-1" onClick={() => setIsMobileMenuOpen(false)}>
+                    Security & Performance
+                  </Link>
+                </motion.div>
+              )}
+            </div>
+
+            <div className="border-t border-white/10 pt-4 space-y-2">
+              <Link href="/about" className="block text-xl font-medium text-white hover:text-primary-soft py-2" onClick={() => setIsMobileMenuOpen(false)}>
+                About
+              </Link>
+              <Link href="/process" className="block text-xl font-medium text-white hover:text-primary-soft py-2" onClick={() => setIsMobileMenuOpen(false)}>
+                Process
+              </Link>
+              <Link href="/case-studies" className="block text-xl font-medium text-white hover:text-primary-soft py-2" onClick={() => setIsMobileMenuOpen(false)}>
+                Case Studies
+              </Link>
+              <Link href="/action-plan" className="block text-xl font-medium text-white hover:text-primary-soft py-2" onClick={() => setIsMobileMenuOpen(false)}>
+                Action Plan
+              </Link>
+            </div>
+
+            <div className="border-t border-white/10 pt-6 space-y-3">
+              <Link href="/action-plan" className="block w-full" onClick={() => setIsMobileMenuOpen(false)}>
            <Button 
             variant="outline" 
-            className="rounded-full bg-transparent border-white/20 text-white w-full max-w-xs h-12"
+                  className="rounded-full bg-transparent border-white/20 text-white w-full h-12"
           >
             Action Plan
           </Button>
-          <Link href="/contact" className="w-full max-w-xs">
-            <Button 
-              className="rounded-full bg-primary-soft text-foreground w-full h-12"
-            >
-              Contact
-            </Button>
-          </Link>
+              </Link>
+              <Link href="/contact" className="block w-full" onClick={() => setIsMobileMenuOpen(false)}>
+          <Button 
+                  className="rounded-full bg-primary-soft text-foreground w-full h-12"
+          >
+            Contact
+          </Button>
+              </Link>
+            </div>
+          </div>
         </div>
       )}
     </nav>

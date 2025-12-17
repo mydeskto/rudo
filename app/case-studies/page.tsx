@@ -20,7 +20,7 @@ export default function CaseStudiesPage() {
       <section className="pt-32 pb-20 px-6 max-w-7xl mx-auto">
         {/* Heading */}
         <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-foreground text-center mb-16 tracking-tight">
-          our recent projects
+          Our Recent Projects
         </h1>
 
         {/* Category Filters */}

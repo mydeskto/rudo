@@ -50,7 +50,7 @@ export function WhatWeDo() {
     <section className="py-20 px-6 max-w-[1400px] mx-auto">
       <div className="bg-primary-soft rounded-[3rem] p-8 md:p-12">
         <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-12 tracking-tight">
-          what we do
+          What We Do
         </h2>
 
         <div className="grid lg:grid-cols-[1fr_2fr] gap-8 mb-8">

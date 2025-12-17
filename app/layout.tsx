@@ -19,18 +19,18 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "Rudo - Strategy-led B2B Web Design Agency",
-  description: "We craft high-performing websites that turn B2B goals into measurable outcomes.",
+  title: "Rudo - Full Stack Website Development & WordPress Design",
+  description: "Full stack developers specializing in website creation and development. We build custom websites from frontend to backend, create WordPress solutions, and provide comprehensive SEO services.",
+  keywords: ["full stack development", "website development", "WordPress design", "SEO services", "frontend development", "backend development", "custom websites"],
   openGraph: {
-    title: "Rudo - Strategy-led B2B Web Design Agency",
-    description: "We craft high-performing websites that turn B2B goals into measurable outcomes.",
+    title: "Rudo - Full Stack Website Development & WordPress Design",
+    description: "Full stack developers specializing in website creation and development. We build custom websites from frontend to backend, create WordPress solutions, and provide comprehensive SEO services.",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    site: "@replit",
-    title: "Rudo - Strategy-led B2B Web Design Agency",
-    description: "We craft high-performing websites that turn B2B goals into measurable outcomes.",
+    title: "Rudo - Full Stack Website Development & WordPress Design",
+    description: "Full stack developers specializing in website creation and development. We build custom websites from frontend to backend, create WordPress solutions, and provide comprehensive SEO services.",
   },
 };
 

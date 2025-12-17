@@ -49,7 +49,7 @@ export function ProcessCarousel() {
       <div className="max-w-[1400px] mx-auto px-6">
         <div className="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
           <h2 className="text-5xl md:text-7xl font-bold text-foreground tracking-tight lowercase">
-            process overview
+            Process Overview
           </h2>
           
           <div className="flex gap-4">

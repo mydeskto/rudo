@@ -10,35 +10,40 @@ const testimonials = [
     quote: "They delivered a complete website from frontend to backend. Impressive technical expertise.",
     author: "Deborah O'Sullivan",
     role: "Director, Ten2Two",
-    color: "#007AFF" // Apple Blue
+    color: "#858a94", // Deep Navy Blue
+    textColor: "#FFFFFF"
   },
   {
     id: 2,
     quote: "Exceptional website development. The final result exceeded our expectations.",
     author: "Hayley Van Leeuwan",
     role: "Director of Product, Voyager Worldwide",
-    color: "#5AC8FA" // Sky Blue
+    color: "#7C3AED", // Vibrant Purple
+    textColor: "#FFFFFF"
   },
   {
     id: 3,
     quote: "Their efficiency and approach are unrivaled. They handled frontend and backend seamlessly.",
     author: "Andrew Mabbitt",
     role: "Director, Computer & Network Security Firm",
-    color: "#6366F1" // Growth Green
+    color: "#059669", // Emerald Green
+    textColor: "#FFFFFF"
   },
   {
     id: 4,
     quote: "Outstanding WordPress development. Custom theme and SEO optimization significantly improved our site's performance.",
     author: "Sarah Johnson",
     role: "CEO, Tech Solutions Inc.",
-    color: "#22C55E" // Growth Green
+    color: "#54559b", 
+    textColor: "#FFFFFF"
   },
   {
     id: 5,
     quote: "Their SEO services helped us rank higher. Combined with excellent WordPress development, our traffic increased dramatically.",
     author: "Michael Chen",
     role: "Marketing Director, Digital Agency",
-    color: "#FF6B6B" // Coral Red
+    color: "#604b81", 
+    textColor: "#FFFFFF"
   }
 ];
 
@@ -98,18 +103,18 @@ export function TestimonialSlider() {
             style={{ backgroundColor: currentTestimonial.color }}
           >
             <div>
-              <Quote className="w-8 h-8 md:w-12 md:h-12 text-foreground opacity-20 mb-4 md:mb-8" />
-              <h3 className="text-lg sm:text-xl md:text-2xl lg:text-4xl font-bold text-foreground leading-tight max-w-4xl select-none">
+              <Quote className="w-8 h-8 md:w-12 md:h-12 mb-4 md:mb-8 opacity-20" style={{ color: currentTestimonial.textColor }} />
+              <h3 className="text-lg sm:text-xl md:text-2xl lg:text-4xl font-bold leading-tight max-w-4xl select-none" style={{ color: currentTestimonial.textColor }}>
                 {currentTestimonial.quote}
               </h3>
             </div>
             
             <div className="flex items-end justify-between select-none">
               <div>
-                <p className="text-foreground font-bold text-xs md:text-sm">
+                <p className="font-bold text-xs md:text-sm" style={{ color: currentTestimonial.textColor }}>
                   — {currentTestimonial.author}
                 </p>
-                <p className="text-foreground/70 text-xs md:text-sm">
+                <p className="text-xs md:text-sm opacity-70" style={{ color: currentTestimonial.textColor }}>
                   {currentTestimonial.role}
                 </p>
               </div>
