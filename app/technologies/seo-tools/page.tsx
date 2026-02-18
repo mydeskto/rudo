@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import { Search, BarChart, TrendingUp, FileText, Globe, Target } from "lucide-react";
+import { Search, BarChart, TrendingUp, FileText, Globe, Target, TrendingDown, AlertCircle, RefreshCw, Shield } from "lucide-react";
 
 export default function SEOToolsPage() {
   return (
@@ -45,7 +45,7 @@ export default function SEOToolsPage() {
             transition={{ delay: 0.4, duration: 0.8 }}
             className="max-w-md text-sm md:text-md text-white/80 leading-relaxed"
           >
-            We use industry-leading SEO tools including Google Search Console, Google Analytics, and other analytics platforms to optimize your website's search visibility.
+            We use industry-leading SEO tools including Google Search Console, Google Analytics, Google Trends, SEMrush, MozBar, Ahrefs, and other analytics platforms to optimize your website's search visibility.
           </motion.p>
         </div>
       </section>
@@ -79,7 +79,7 @@ export default function SEOToolsPage() {
                 professional seo toolkit
               </h2>
               <p className="text-white text-sm leading-tight text-center max-w-2xl">
-                Our comprehensive SEO toolkit includes Google Search Console, Google Analytics, Google Tag Manager, keyword research tools like Ahrefs and SEMrush, and various analytics platforms. We implement proper tracking, set up conversion goals, create custom reports, and provide regular SEO audits and recommendations.
+                Our comprehensive SEO toolkit includes Google Search Console, Google Analytics, Google Tag Manager, Google Trends, SEMrush, MozBar, Ahrefs, and various analytics platforms. We implement proper tracking, set up conversion goals, create custom reports, and provide regular SEO audits and recommendations.
               </p>
             </div>
           </div>
@@ -98,9 +98,24 @@ export default function SEOToolsPage() {
               desc: "We implement comprehensive Google Analytics tracking to monitor website traffic, user behavior, conversion funnels, and goal completions. We set up custom events, e-commerce tracking, user flow analysis, and conversion attribution. Our analytics implementation provides deep insights into your audience, their behavior, and how they interact with your website, enabling us to optimize for better user experience and conversions."
             },
             {
+              icon: TrendingUp,
+              title: "Google Trends",
+              desc: "We leverage Google Trends to identify emerging search trends, seasonal patterns, and rising keyword opportunities. Google Trends helps us understand search interest over time, compare keyword popularity across regions, and discover related queries. This tool enables us to create timely, relevant content that aligns with current search behavior and capitalize on trending topics in your industry."
+            },
+            {
               icon: Target,
-              title: "Keyword Research & Strategy",
-              desc: "We use professional keyword research tools to identify high-value keywords with strong search volume and commercial intent. Our keyword strategy includes primary keywords, long-tail keywords, semantic keywords, and competitor keyword analysis. We map keywords to content, track keyword rankings, and continuously refine our keyword strategy based on performance data and search trends."
+              title: "SEMrush",
+              desc: "We use SEMrush for comprehensive SEO analysis including keyword research, competitor analysis, backlink audits, and site audits. SEMrush provides detailed insights into keyword difficulty, search volume, competitor rankings, and backlink profiles. We use this powerful tool to identify optimization opportunities, track keyword rankings, analyze competitor strategies, and build effective SEO campaigns that drive measurable results."
+            },
+            {
+              icon: FileText,
+              title: "MozBar",
+              desc: "We utilize MozBar, a browser extension that provides instant SEO metrics while browsing any website. MozBar displays domain authority, page authority, link metrics, and on-page SEO factors in real-time. This tool helps us quickly assess the SEO strength of pages, identify optimization opportunities, and analyze competitor websites efficiently. MozBar streamlines our SEO analysis workflow and provides actionable insights at a glance."
+            },
+            {
+              icon: Globe,
+              title: "Ahrefs",
+              desc: "We use Ahrefs for advanced SEO research including backlink analysis, keyword research, content gap analysis, and rank tracking. Ahrefs provides comprehensive data on backlink profiles, referring domains, organic search traffic estimates, and keyword difficulty scores. We leverage Ahrefs to build high-quality backlink strategies, identify content opportunities, track keyword rankings, and conduct thorough competitor research to develop winning SEO strategies."
             },
             {
               icon: TrendingUp,
@@ -111,11 +126,6 @@ export default function SEOToolsPage() {
               icon: FileText,
               title: "Content Performance Analysis",
               desc: "We analyze content performance to identify top-performing pages, content gaps, and optimization opportunities. We track metrics like page views, time on page, bounce rates, and conversion rates for each piece of content. This analysis helps us understand what content resonates with your audience and search engines, enabling us to create more effective content and optimize existing pages for better performance."
-            },
-            {
-              icon: Globe,
-              title: "Competitive Intelligence",
-              desc: "We conduct comprehensive competitor analysis to understand their SEO strategies, identify opportunities, and benchmark performance. We analyze competitor keywords, backlink profiles, content strategies, and technical SEO implementations. This competitive intelligence helps us develop strategies to outperform competitors, identify content gaps, and discover new opportunities for growth in your market."
             }
           ].map((item, i) => {
             const IconComponent = item.icon;
@@ -135,6 +145,83 @@ export default function SEOToolsPage() {
               </div>
             );
           })}
+          </div>
+        </div>
+      </section>
+
+      {/* Google Updates Recovery Section */}
+      <section className="py-20 px-6 max-w-7xl mx-auto">
+        <div className="bg-gradient-to-br from-foreground to-foreground/90 rounded-[3rem] p-8 md:p-12 lg:p-16 overflow-hidden relative">
+          {/* Background Effects */}
+          <div className="absolute top-0 right-0 w-64 h-64 bg-primary-soft/10 rounded-full blur-[100px]" />
+          <div className="absolute bottom-0 left-0 w-48 h-48 bg-primary-soft/5 rounded-full blur-[80px]" />
+          
+          <div className="relative z-10">
+            <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12">
+              <div className="flex-1">
+                <div className="flex items-center gap-3 mb-6">
+                  <AlertCircle className="w-6 h-6 text-primary-soft" />
+                  <span className="px-4 py-2 rounded-full border border-white/10 text-sm text-white/80 bg-white/5 backdrop-blur-sm">
+                    Google Algorithm Updates
+                  </span>
+                </div>
+                <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight">
+                  Recover from Google <br className="hidden md:block" />
+                  <span className="text-primary-soft">Algorithm Updates</span>
+                </h2>
+                <p className="text-white/90 text-sm md:text-base leading-relaxed mb-8 max-w-2xl">
+                  Has your website's ranking dropped or traffic decreased due to a Google algorithm update? We specialize in helping websites recover from ranking penalties and traffic drops caused by Google's algorithm changes. Our team analyzes what went wrong, implements necessary fixes, and rebuilds your search visibility.
+                </p>
+                <div className="space-y-4">
+                  {[
+                    {
+                      icon: TrendingDown,
+                      title: "Identify the Problem",
+                      desc: "We analyze your website to identify what caused the ranking drop, whether it's a core update, spam update, or quality issue."
+                    },
+                    {
+                      icon: RefreshCw,
+                      title: "Implement Fixes",
+                      desc: "We address technical issues, improve content quality, fix on-page SEO problems, and ensure compliance with Google's guidelines."
+                    },
+                    {
+                      icon: TrendingUp,
+                      title: "Rebuild Rankings",
+                      desc: "We develop a recovery strategy to rebuild your search visibility, improve rankings, and restore organic traffic growth."
+                    },
+                    {
+                      icon: Shield,
+                      title: "Future-Proof Your Site",
+                      desc: "We implement best practices to protect your website from future algorithm updates and maintain stable rankings."
+                    }
+                  ].map((item, i) => {
+                    const IconComponent = item.icon;
+                    return (
+                      <motion.div
+                        key={i}
+                        initial={{ opacity: 0, x: -20 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ delay: i * 0.1 }}
+                        className="flex gap-4 items-start bg-white/5 backdrop-blur-sm rounded-2xl p-4 border border-white/10"
+                      >
+                        <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-primary-soft/20 flex items-center justify-center">
+                          <IconComponent className="w-5 h-5 text-primary-soft" />
+                        </div>
+                        <div className="flex-1">
+                          <h3 className="text-white font-bold mb-1 text-base md:text-lg">
+                            {item.title}
+                          </h3>
+                          <p className="text-white/80 text-sm leading-relaxed">
+                            {item.desc}
+                          </p>
+                        </div>
+                      </motion.div>
+                    );
+                  })}
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>

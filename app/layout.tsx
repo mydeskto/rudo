@@ -19,17 +19,17 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "Rudo - Full Stack Website Development & WordPress Design",
+  title: "NexiqoTech - Full Stack Website Development & WordPress Design",
   description: "Full stack developers specializing in website creation and development. We build custom websites from frontend to backend, create WordPress solutions, and provide comprehensive SEO services.",
   keywords: ["full stack development", "website development", "WordPress design", "SEO services", "frontend development", "backend development", "custom websites"],
   openGraph: {
-    title: "Rudo - Full Stack Website Development & WordPress Design",
+    title: "NexiqoTech - Full Stack Website Development & WordPress Design",
     description: "Full stack developers specializing in website creation and development. We build custom websites from frontend to backend, create WordPress solutions, and provide comprehensive SEO services.",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Rudo - Full Stack Website Development & WordPress Design",
+    title: "NexiqoTech - Full Stack Website Development & WordPress Design",
     description: "Full stack developers specializing in website creation and development. We build custom websites from frontend to backend, create WordPress solutions, and provide comprehensive SEO services.",
   },
 };

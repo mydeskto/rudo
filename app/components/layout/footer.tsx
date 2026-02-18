@@ -13,7 +13,7 @@ export function Footer() {
             <Link href="/" className="inline-block mb-6">
               <img 
                 src="/logo.svg" 
-                alt="Rudo" 
+                alt="NexiqoTech" 
                 className="h-8 w-auto"
                 style={{ filter: "brightness(0) saturate(100%) invert(88%) sepia(21%) saturate(718%) hue-rotate(39deg) brightness(101%) contrast(96%)" }}
               />
@@ -129,8 +129,8 @@ export function Footer() {
             <ul className="space-y-4">
               <li className="flex items-start gap-3">
                 <Mail size={18} className="text-primary-soft mt-0.5 shrink-0" />
-                <a href="mailto:hello@rudo.co.uk" className="text-white/70 hover:text-primary-soft transition-colors text-sm">
-                  hello@rudo.co.uk
+                <a href="mailto:hello@NexiqoTech.co.uk" className="text-white/70 hover:text-primary-soft transition-colors text-sm">
+                  hello@NexiqoTech.co.uk
                 </a>
               </li>
               <li className="flex items-start gap-3">
@@ -153,7 +153,7 @@ export function Footer() {
         <div className="border-t border-white/10 pt-2 mt-12">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-white/60 text-sm">
-              © {new Date().getFullYear()} Rudo. All rights reserved.
+              © {new Date().getFullYear()} NexiqoTech. All rights reserved.
             </p>
             {/* <div className="flex flex-wrap gap-6 text-sm">
               <Link href="#" className="text-white/60 hover:text-primary-soft transition-colors">

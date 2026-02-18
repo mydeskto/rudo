@@ -56,7 +56,7 @@ export default function Home() {
             transition={{ delay: 0.4, duration: 0.8 }}
             className="max-w-md text-sm md:text-md text-white leading-relaxed"
           >
-We build high-performance websites from frontend to backend, handling everything from design to deployment. Our services include custom WordPress development, theme and plugin creation, optimization, and comprehensive SEO solutions to improve visibility, rankings, and business growth.          </motion.p>
+            We build high-performance websites from frontend to backend, handling everything from design to deployment. Our services include custom WordPress development, theme and plugin creation, optimization, and comprehensive SEO solutions to improve visibility, rankings, and business growth.          </motion.p>
 
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
@@ -66,15 +66,15 @@ We build high-performance websites from frontend to backend, handling everything
           >
             <Link href="/contact">
               <Button className="h-16 pl-6 pr-2 rounded-2xl bg-card text-foreground hover:bg-muted text-base font-semibold shadow-lg shadow-primary-soft/10 flex items-center gap-4 transition-transform hover:scale-105">
-              <span className="flex items-center gap-2">
-                <Calendar size={18} />
+                <span className="flex items-center gap-2">
+                  <Calendar size={18} />
                   Start Your Project
-              </span>
+                </span>
                 <div className="h-12 w-12 rounded-xl overflow-hidden bg-muted ml-2 relative flex items-center justify-center">
                   <div className="w-8 h-8 bg-primary-soft/20 rounded-full"></div>
                   <div className="absolute top-1 right-1 w-2.5 h-2.5 bg-primary-soft rounded-full border border-white"></div>
-              </div>
-            </Button>
+                </div>
+              </Button>
             </Link>
           </motion.div>
         </div>
@@ -171,7 +171,7 @@ We build high-performance websites from frontend to backend, handling everything
               {/* Main Headline */}
               <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary-soft mb-12 leading-tight text-center">
                 We Create World-Class Websites
-        </h2>
+              </h2>
               <p className="text-white text-sm leading-tight text-center max-w-sm">
                 We are a team of full stack developers who specialize in building custom websites from frontend to backend. We handle both frontend and backend development, create WordPress solutions, and provide comprehensive SEO services (On-Page, Off-Page, Technical, and Local SEO) to build complete, functional websites that perform well in search engines.
               </p>
@@ -181,17 +181,17 @@ We build high-performance websites from frontend to backend, handling everything
           {/* Right Column - White Cards Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {[
-            {
+              {
                 title: "Frontend Development",
                 desc: "We build beautiful, responsive user interfaces using modern frameworks and technologies. We create intuitive designs that provide excellent user experiences and work seamlessly across all devices.",
                 icon: Smartphone
-            },
-            {
+              },
+              {
                 title: "Backend Development",
                 desc: "We develop robust server-side systems, APIs, and databases. We handle authentication, data management, integrations, and all the technical infrastructure your website needs.",
                 icon: FileText
-            },
-            {
+              },
+              {
                 title: "WordPress Design & Development",
                 desc: "We create custom WordPress websites with beautiful designs and powerful functionality. Our services include custom theme development, plugin creation, WooCommerce integration, WordPress optimization, and security hardening. We build fast, secure, and SEO-friendly WordPress sites.",
                 icon: PenTool
@@ -210,9 +210,9 @@ We build high-performance websites from frontend to backend, handling everything
                       {item.title}
                     </h3>
                     <p className="text-muted-foreground leading-relaxed text-sm md:text-base mb-6">
-                {item.desc}
-              </p>
-            </div>
+                      {item.desc}
+                    </p>
+                  </div>
                   <div className="flex justify-end">
                     <IconComponent className="w-8 h-8 text-foreground opacity-20" />
                   </div>
@@ -237,8 +237,8 @@ We build high-performance websites from frontend to backend, handling everything
           </h2>
           <Link href="/about">
             <Button variant="link" className="text-foreground text-lg font-medium hidden md:flex items-center gap-2">
-            See all members <ArrowRight size={20} />
-          </Button>
+              See all members <ArrowRight size={20} />
+            </Button>
           </Link>
         </div>
 
@@ -271,8 +271,8 @@ We build high-performance websites from frontend to backend, handling everything
           </h2>
           <Link href="/case-studies">
             <Button variant="link" className="text-foreground text-lg font-medium hidden md:flex items-center gap-2">
-            View all work <ArrowRight size={20} />
-          </Button>
+              View all work <ArrowRight size={20} />
+            </Button>
           </Link>
         </div>
 
@@ -280,13 +280,13 @@ We build high-performance websites from frontend to backend, handling everything
           {projects.slice(0, 4).map((project) => (
             <div key={project.id} className="group relative">
               <Link href={`/case-studies/${project.id}`} className="block cursor-pointer">
-              <div className="relative overflow-hidden rounded-3xl aspect-[16/10] mb-6">
-                <div className="absolute inset-0 bg-black/10 group-hover:bg-black/0 transition-colors z-10" />
-                <img
-                  src={project.img}
-                  alt={project.name}
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                />
+                <div className="relative overflow-hidden rounded-sm border border-input shadow-sm aspect-21/9 mb-6 ">
+                  <div className="absolute inset-0  group-hover:bg-black/0 transition-colors z-10" />
+                  <img
+                    src={project.img}
+                    alt={project.name}
+                    className="w-full h-full object-contain transition-transform duration-700 group-hover:scale-105"
+                  />
                   {project.url && (
                     <div
                       className="absolute top-4 right-4 z-20 w-12 h-12 bg-white rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 translate-y-4 group-hover:translate-y-0"
@@ -317,13 +317,13 @@ We build high-performance websites from frontend to backend, handling everything
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mt-12">
             <Link href="/contact">
               <Button className="h-14 px-8 rounded-full bg-primary-soft text-foreground hover:bg-primary-soft/80 text-lg font-bold">
-              Schedule Intro Call
-            </Button>
+                Schedule Intro Call
+              </Button>
             </Link>
             <Link href="/case-studies">
-            <Button variant="outline" className="h-14 px-8 rounded-full bg-transparent border-white/20 text-white hover:bg-white/10 text-lg font-medium">
-              View Our Work
-            </Button>
+              <Button variant="outline" className="h-14 px-8 rounded-full bg-transparent border-white/20 text-white hover:bg-white/10 text-lg font-medium">
+                View Our Work
+              </Button>
             </Link>
           </div>
         </div>

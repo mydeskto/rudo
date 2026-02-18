@@ -9,7 +9,7 @@ import { format } from "date-fns";
 import { cn } from "@/lib/utils";
 import "react-day-picker/dist/style.css";
 
-// Rudo theme colors
+// NexiqoTech theme colors
 const THEME = {
   primary: "#101703",
   accent: "#DAF9A0",
@@ -84,7 +84,7 @@ export function BookingSection() {
             transition={{ delay: 0.2 }}
             className="text-xl text-gray-600 max-w-md leading-relaxed"
           >
-            Ready to explore how Rudo's strategy-led design can help your business grow? Let's chat!
+            Ready to explore how NexiqoTech's strategy-led design can help your business grow? Let's chat!
           </motion.p>
 
           {/* Abstract 3D Elements (Visual Decoration) */}
@@ -130,7 +130,7 @@ export function BookingSection() {
                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop" alt="Host" />
             </div>
             <div>
-              <p className="text-sm text-gray-500 font-medium mb-1">Rudo Agency</p>
+              <p className="text-sm text-gray-500 font-medium mb-1">NexiqoTech Agency</p>
               <h3 className="text-2xl font-bold text-foreground">30 Min Meeting</h3>
             </div>
             <div className="space-y-4 text-gray-600 text-sm font-medium">

@@ -49,7 +49,7 @@ export function Navbar() {
         <Link href="/" className="flex items-center gap-2">
           <img 
             src="/logo.svg" 
-            alt="Rudo" 
+            alt="NexiqoTech" 
             className={cn("h-8 w-auto transition-all duration-300")}
             style={
               isCaseStudiesPage || ActionPlanPage || isProcessPage
@@ -59,7 +59,7 @@ export function Navbar() {
                   : { filter: "brightness(0) saturate(0%)" } // Black logo when scrolled or menu open
             }
           />
-           <span className="sr-only">Rudo</span>
+           <span className="sr-only">NexiqoTech</span>
         </Link>
 
         {/* Desktop Nav - Custom Full Width Menu */}

@@ -1,16 +1,16 @@
 export const teamMembers = [
-  // { 
-  //   name: "Mubashir Ali Hassan", 
-  //   role: "Full Stack Developer", 
-  //   bio: "Expert in both frontend and backend development, building complete website solutions from start to finish.",
-  //   img: "/developer-1.jpg" 
-  // },
   { 
-    name: "Nick", 
-    role: "Frontend & SEO Developer", 
-    bio: "Focuses on creating beautiful user interfaces while implementing SEO best practices throughout development.",
-    img: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop" 
+    name: "Mubashir Ali Hassan", 
+    role: "Full Stack Developer", 
+    bio: "Expert in both frontend and backend development, building complete website solutions from start to finish.",
+    img: "/developer-1.jpg" 
   },
+  // { 
+  //   name: "Nick", 
+  //   role: "Frontend & SEO Developer", 
+  //   bio: "Focuses on creating beautiful user interfaces while implementing SEO best practices throughout development.",
+  //   img: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop" 
+  // },
   { 
     name: "Shahzad Ali", 
     role: "Full Stack Developer", 
