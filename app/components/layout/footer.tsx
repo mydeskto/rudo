@@ -12,7 +12,7 @@ export function Footer() {
           <div className="lg:col-span-1">
             <Link href="/" className="inline-block mb-6">
               <img 
-                src="/logo.svg" 
+                src="/logo.png" 
                 alt="NexiqoTech" 
                 className="h-8 w-auto"
                 style={{ filter: "brightness(0) saturate(100%) invert(88%) sepia(21%) saturate(718%) hue-rotate(39deg) brightness(101%) contrast(96%)" }}

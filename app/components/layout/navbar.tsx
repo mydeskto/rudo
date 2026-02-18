@@ -48,16 +48,16 @@ export function Navbar() {
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2">
           <img 
-            src="/logo.svg" 
+            src="/logo.png" 
             alt="NexiqoTech" 
             className={cn("h-8 w-auto transition-all duration-300")}
-            style={
-              isCaseStudiesPage || ActionPlanPage || isProcessPage
-                ? { filter: "brightness(0) saturate(0%)" } // Force black on case studies page
-                : !isMenuOpen && !isScrolled 
-                  ? { filter: "brightness(0) saturate(100%) invert(88%) sepia(21%) saturate(718%) hue-rotate(39deg) brightness(101%) contrast(96%)" } 
-                  : { filter: "brightness(0) saturate(0%)" } // Black logo when scrolled or menu open
-            }
+            // style={
+            //   isCaseStudiesPage || ActionPlanPage || isProcessPage
+            //     ? { filter: "brightness(0) saturate(0%)" } // Force black on case studies page
+            //     : !isMenuOpen && !isScrolled 
+            //       ? { filter: "brightness(0) saturate(100%) invert(88%) sepia(21%) saturate(718%) hue-rotate(39deg) brightness(101%) contrast(96%)" } 
+            //       : { filter: "brightness(0) saturate(0%)" } // Black logo when scrolled or menu open
+            // }
           />
            <span className="sr-only">NexiqoTech</span>
         </Link>
