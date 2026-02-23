@@ -1,9 +1,11 @@
 import type { Metadata } from "next";
+import { Suspense } from "react";
 import { Plus_Jakarta_Sans, Poppins } from "next/font/google";
 import "./globals.css";
 import { Providers } from "./providers";
 import { Navbar } from "@/components/layout/navbar";
 import { Footer } from "@/components/layout/footer";
+import { NavigationProgressBar } from "@/components/layout/navigation-progress-bar";
 
 const plusJakartaSans = Plus_Jakarta_Sans({
   subsets: ["latin"],
@@ -19,19 +21,27 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "NexiqoTech - Full Stack Website Development & WordPress Design",
+  title: "Nexiqo - Full Stack Website Development & WordPress Design",
   description: "Full stack developers specializing in website creation and development. We build custom websites from frontend to backend, create WordPress solutions, and provide comprehensive SEO services.",
   keywords: ["full stack development", "website development", "WordPress design", "SEO services", "frontend development", "backend development", "custom websites"],
   openGraph: {
-    title: "NexiqoTech - Full Stack Website Development & WordPress Design",
+    title: "Nexiqo - Full Stack Website Development & WordPress Design",
     description: "Full stack developers specializing in website creation and development. We build custom websites from frontend to backend, create WordPress solutions, and provide comprehensive SEO services.",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "NexiqoTech - Full Stack Website Development & WordPress Design",
+    title: "Nexiqo - Full Stack Website Development & WordPress Design",
     description: "Full stack developers specializing in website creation and development. We build custom websites from frontend to backend, create WordPress solutions, and provide comprehensive SEO services.",
   },
+  icons: {
+    icon: "/images/favicon.png",
+    apple: "/images/apple-touch-icon.png",
+    other: [
+      { rel: "icon", url: "/images/favicon.png", sizes: "32x32" },
+      { rel: "icon", url: "/images/favicon-16x16.png", sizes: "16x16" }
+    ]
+  }
 };
 
 export default function RootLayout({
@@ -43,6 +53,9 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body className={`${plusJakartaSans.variable} ${poppins.variable} font-sans`}>
         <Providers>
+          <Suspense fallback={null}>
+            <NavigationProgressBar />
+          </Suspense>
           <Navbar />
           {children}
           <Footer />

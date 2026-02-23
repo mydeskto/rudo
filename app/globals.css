@@ -239,7 +239,7 @@
     }
 }
 
-/* Custom Utilities for NexiqoTech Style */
+/* Custom Utilities for Nexiqo Style */
 @layer utilities {
     .text-balance {
         text-wrap: balance;

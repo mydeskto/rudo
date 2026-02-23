@@ -6,16 +6,16 @@ import { Facebook, Twitter, Linkedin, Instagram, Mail, Phone, MapPin } from "luc
 export function Footer() {
   return (
     <footer className="bg-foreground text-white">
-      <div className="max-w-7xl mx-auto px-6 py-12 md:py-16">
+      <div className="max-w-full mx-auto px-6 py-12 md:py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
           {/* Logo & Description */}
           <div className="lg:col-span-1">
             <Link href="/" className="inline-block mb-6">
               <img 
-                src="/logo.png" 
-                alt="NexiqoTech" 
-                className="h-8 w-auto"
-                style={{ filter: "brightness(0) saturate(100%) invert(88%) sepia(21%) saturate(718%) hue-rotate(39deg) brightness(101%) contrast(96%)" }}
+                src="/images/nexiqo.png" 
+                alt="Nexiqo" 
+                className="h-14 w-auto object-contain"
+                
               />
             </Link>
             <p className="text-white/70 text-sm leading-relaxed mb-6">
@@ -129,8 +129,8 @@ export function Footer() {
             <ul className="space-y-4">
               <li className="flex items-start gap-3">
                 <Mail size={18} className="text-primary-soft mt-0.5 shrink-0" />
-                <a href="mailto:hello@NexiqoTech.co.uk" className="text-white/70 hover:text-primary-soft transition-colors text-sm">
-                  hello@NexiqoTech.co.uk
+                <a href="mailto:hello@Nexiqo.co.uk" className="text-white/70 hover:text-primary-soft transition-colors text-sm">
+                  hello@Nexiqo.co.uk
                 </a>
               </li>
               <li className="flex items-start gap-3">
@@ -153,7 +153,7 @@ export function Footer() {
         <div className="border-t border-white/10 pt-2 mt-12">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-white/60 text-sm">
-              © {new Date().getFullYear()} NexiqoTech. All rights reserved.
+              © {new Date().getFullYear()} Nexiqo. All rights reserved.
             </p>
             {/* <div className="flex flex-wrap gap-6 text-sm">
               <Link href="#" className="text-white/60 hover:text-primary-soft transition-colors">

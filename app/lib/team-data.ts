@@ -3,7 +3,7 @@ export const teamMembers = [
     name: "Mubashir Ali Hassan", 
     role: "Full Stack Developer", 
     bio: "Expert in both frontend and backend development, building complete website solutions from start to finish.",
-    img: "/developer-1.jpg" 
+    img: "/images/developer-1.jpg" 
   },
   // { 
   //   name: "Nick", 
@@ -15,13 +15,13 @@ export const teamMembers = [
     name: "Shahzad Ali", 
     role: "Full Stack Developer", 
     bio: "Specializes in full stack development, creating scalable websites with modern technologies and best practices.",
-    img: "/developer-2.jpg" 
+    img: "/images/developer-2.jpg" 
   },
   { 
     name: "Muhammad Iqbal", 
     role: "SEO Specialist", 
     bio: "Specializes in SEO optimization and search engine strategies to improve website visibility and rankings.",
-    img: "/developer-3.png" 
+    img: "/images/developer-3.png" 
   },
   
 ];

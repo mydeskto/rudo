@@ -8,7 +8,7 @@ import { teamMembers } from "@/lib/team-data";
 
 export default function AboutPage() {
   return (
-    <div className="min-h-screen bg-background font-sans">
+    <div className="min-h-screen bg-background font-sans pt-6">
       {/* Hero Section */}
       <section className="relative min-h-[20vh] bg-foreground text-white pt-22 pb-10 px-6 overflow-hidden flex flex-col justify-center items-center">
         {/* Background Effects */}
@@ -17,7 +17,7 @@ export default function AboutPage() {
           <div className="absolute bottom-[-10%] right-[-10%] w-[50vw] h-[50vw] bg-primary-soft/5 rounded-full blur-[100px]" />
         </div>
 
-        <div className="relative z-10 max-w-5xl mx-auto text-center flex flex-col items-center gap-8">
+        <div className="relative z-10 max-w-5xl mx-auto text-center flex flex-col items-center gap-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}

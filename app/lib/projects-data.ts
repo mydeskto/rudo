@@ -10,9 +10,9 @@ export const projects = [
     name: "Nepal Premier League",
     category: "Sports",
     description: "Complete Cricket League Website & Platform",
-    img: "/npl-1.png",
+    img: "/images/npl-1.png",
     url: "https://nplt20league.com/",
-    images: ["/npl-1.png", "/npl-2.png", "/npl-3.png"],
+    images: ["/images/npl-1.png", "/images/npl-2.png", "/images/npl-3.png"],
     detailedDescription: "Nepal Premier League (NPL) is Nepal's premier professional Twenty20 cricket tournament. We developed a comprehensive website platform that provides complete coverage of the league, including match schedules, live scores, team information, player statistics, and ticket booking.",
     projectPurpose: "The platform serves as the central hub for cricket fans to stay updated with all NPL activities. It provides real-time match information, team standings, player statistics, and facilitates ticket sales for matches across Nepal.",
     workDone: [
@@ -42,9 +42,9 @@ export const projects = [
     name: "Corrector Català",
     category: "Tech & SaaS",
     description: "AI-Powered Catalan Language Correction Tool",
-    img: "/catala-1.png",
+    img: "/images/catala-1.png",
     url: "https://correctorcatala.es/",
-    images: ["/catala-1.png", "/catala-2.png", "/catala-3.png", "/catala-4.png"],
+    images: ["/images/catala-1.png", "/images/catala-2.png", "/images/catala-3.png", "/images/catala-4.png"],
     detailedDescription: "Corrector Català is a professional AI-powered online tool for spelling and grammar correction in Catalan. This free web application helps users improve the quality of their Catalan texts with real-time corrections, intelligent suggestions, and an easy-to-use interface. It's an essential tool for Catalan learners and native speakers who want to enhance their language skills.",
     projectPurpose: "To provide a comprehensive, free, and accessible tool for correcting Catalan texts. The platform aims to help users improve their Catalan writing skills through real-time corrections, intelligent AI-powered suggestions, and a user-friendly interface. It serves both learners and professionals who need accurate Catalan text correction.",
     workDone: [

@@ -243,16 +243,16 @@ export default function ProcessPage() {
   };
 
   return (
-    <div className="min-h-screen bg-background font-sans">
+    <div className="min-h-screen bg-background font-sans pt-8">
       {/* Hero Section */}
-      <section className="relative min-h-[20vh] bg-primary-soft text-foreground pt-26 pb-10 px-6 overflow-hidden flex flex-col justify-center items-center">
+      <section className="relative min-h-[40vh] bg-primary-soft text-foreground pt-26 pb-10 px-6 overflow-hidden flex flex-col justify-center items-center">
         {/* Background Effects */}
         <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
           <div className="absolute top-[-20%] left-[10%] w-[60vw] h-[60vw] bg-foreground/5 rounded-full blur-[120px]" />
           <div className="absolute bottom-[-10%] right-[-10%] w-[50vw] h-[50vw] bg-foreground/3 rounded-full blur-[100px]" />
         </div>
 
-        <div className="relative z-10 max-w-5xl mx-auto text-center flex flex-col items-center gap-8">
+        <div className="relative z-10 max-w-5xl mx-auto text-center flex flex-col items-center gap-4">
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}

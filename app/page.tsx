@@ -12,6 +12,7 @@ import { WhatWeDo } from "@/components/sections/what-we-do";
 import { teamMembers } from "@/lib/team-data";
 import { projects } from "@/lib/projects-data";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Home() {
 
@@ -54,7 +55,7 @@ export default function Home() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4, duration: 0.8 }}
-            className="max-w-md text-sm md:text-md text-white leading-relaxed"
+            className="max-w-4xl text-sm md:text-md text-white leading-relaxed"
           >
             We build high-performance websites from frontend to backend, handling everything from design to deployment. Our services include custom WordPress development, theme and plugin creation, optimization, and comprehensive SEO solutions to improve visibility, rankings, and business growth.          </motion.p>
 
@@ -70,9 +71,14 @@ export default function Home() {
                   <Calendar size={18} />
                   Start Your Project
                 </span>
-                <div className="h-12 w-12 rounded-xl overflow-hidden bg-muted ml-2 relative flex items-center justify-center">
-                  <div className="w-8 h-8 bg-primary-soft/20 rounded-full"></div>
-                  <div className="absolute top-1 right-1 w-2.5 h-2.5 bg-primary-soft rounded-full border border-white"></div>
+                <div className="h-12 w-12 rounded-xl overflow-hidden bg-muted ml-2 relative flex items-center justify-center flex-shrink-0">
+                  <Image
+                    src="/nexiqo.png"
+                    alt=""
+                    width={48}
+                    height={48}
+                    className="object-contain size-full"
+                  />
                 </div>
               </Button>
             </Link>
@@ -133,7 +139,7 @@ export default function Home() {
         {/* Decorative SVG Line - Overlay on heading, positioned to the left */}
         <div className="hidden md:block absolute top-1/2 left-0 -translate-y-1/2 w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-2xl pointer-events-none z-0" style={{ left: '0%' }}>
           <img
-            src="/intro_line_1.svg"
+            src="/images/intro_line_1.svg"
             alt="Decorative line"
             className="w-full h-auto"
           />
@@ -141,7 +147,7 @@ export default function Home() {
         {/* Decorative SVG Line 2 - Overlay on heading, positioned in center */}
         <div className="hidden md:block absolute top-[53%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-[200px] sm:max-w-xs pointer-events-none z-0">
           <img
-            src="/intro_line_2.svg"
+            src="/images/intro_line_2.svg"
             alt="Decorative line 2"
             className="w-full h-auto"
           />

@@ -6,7 +6,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { useState } from "react";
 
 function getQueryFn<T>(options: { on401: "returnNull" | "throw" }) {
-  return async ({ queryKey }: { queryKey: unknown[] }) => {
+  return async ({ queryKey }: { queryKey: readonly unknown[] }) => {
     const res = await fetch(queryKey.join("/") as string, {
       credentials: "include",
     });

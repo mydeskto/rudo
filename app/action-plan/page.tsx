@@ -9,7 +9,7 @@ export default function ActionPlanPage() {
   return (
     <div className="min-h-screen bg-background font-sans">
       {/* Hero Section */}
-      <section className="relative min-h-[20vh] bg-primary-soft text-foreground pt-26 pb-10 px-6 overflow-hidden flex flex-col justify-center items-center">
+      <section className="relative min-h-[40vh] bg-primary-soft text-foreground pt-32 pb-10 px-6 overflow-hidden flex flex-col justify-center items-center">
         {/* Background Effects */}
         <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
           <div className="absolute top-[-20%] left-[10%] w-[60vw] h-[60vw] bg-foreground/5 rounded-full blur-[120px]" />
@@ -17,18 +17,6 @@ export default function ActionPlanPage() {
         </div>
 
         <div className="relative z-10 max-w-5xl mx-auto text-center flex flex-col items-center gap-8">
-          {/* <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2, duration: 0.8 }}
-            className="flex items-center justify-center gap-2 mb-6"
-          >
-            <FileText className="w-5 h-5 text-foreground" />
-            <span className="px-4 py-2 rounded-full border border-foreground/10 text-sm text-foreground/60 bg-foreground/5 backdrop-blur-sm">
-              Action Plan
-            </span>
-          </motion.div> */}
-
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
